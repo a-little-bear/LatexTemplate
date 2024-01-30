@@ -1,0 +1,278 @@
+\documentclass[12pt]{alittlebear}
+
+\def\name{Joseph Siu}
+\def\course{MAT114: Latex IV}
+\def\headername{UserGuide }
+\def\headernum{XX}
+
+\begin{document} 
+
+\tableofcontents
+
+\section{Introduction}
+
+\noindent
+The DocumentClass \textit{alittlebear.cls} aims to provide a simple and easy template for writing math notes on latex. The link to alittlebear.cls can be found at \url{https://github.com/a-little-bear/Latex-Template}.\\
+
+\noindent
+Here is the template of a new tex file: 
+\begin{note}
+    \begin{verbatim}
+\documentclass[12pt]{alittlebear}
+
+\def\name{}
+\def\course{}
+\def\headername{}
+\def\headernum{}
+
+\begin{document} 
+
+
+
+\end{document}    
+    \end{verbatim}
+\end{note}
+
+\newpage
+
+\section{Settings}
+
+\subsection{Document Preamble}\hfill
+
+\verb=\documentclass[#pt]{alittlebear}=
+\explain{\#: font size in $\{10, 11, 12\}$, in pt}
+
+\verb=\def\name{#}=
+\explain{\#: author name}
+
+\verb=\def\course{#}=
+\explain{\#: course name}
+
+\verb=\def\headername{#}=
+\explain{\#: header name}
+
+\verb=\def\headernum{#}=
+\explain{\#: header number}
+
+
+
+\subsection{Document Class}\hfill
+
+\verb=\setlength\parindent{0pt}=
+\explain{Indentation, Default: 0pt}
+
+\verb=\def\maincolor{brown}=
+\explain{Main color, Default: brown}
+
+\verb=\RequirePackage[margin=0.5in]{geometry}=
+\explain{Margin, Default: 0.5in, may change to 1in}
+
+\verb=\theoremstyle{definition}=
+\explain{Theorem style from asmthm, Default: definition}
+
+
+
+
+
+
+\newpage
+\section{Commands}
+
+\subsection{Formatting Commands}\hfill
+
+\verb=\ind[1][5]{\hspace*{#1mm}}=
+\explain{\#1: indentation, Default: 5mm}
+\begin{verbatim}
+                Example: \ind{
+                    This is an indented paragraph
+                }
+                \ind[10]{
+                    This is an indented paragraph with 10mm indentation
+                }
+\end{verbatim}
+
+\verb=\unind[1][5]{\hspace*{-#1mm}}=
+\explain{\#1: unindentation, Default: -5mm}
+
+\verb=\explain[2][20]{\\\ind[#1]{#2}}=
+\explain{\#1: indentation, Default: 20mm, \#2: explanation}
+
+\newpage
+\subsection{TColorBox Commands}\hfill
+
+\verb=\qbreak=
+\explain{End the question and follow by the proof / solution}
+
+\verb=\envbreak=
+\explain{And a seperator line within an environment}
+
+\verb=\tcbcnt=
+\explain{Set the counter for tcolorbox theorem environment}
+
+\verb=\retcbcnt=
+\explain{Reset the counter for tcolorbox theorem environment}
+
+\verb=\newn,\newm=
+\explain{New notitle tcolorbox}
+\begin{verbatim}
+                Example: \newn{
+                    This is a new notitle "note" tcolorbox 
+                }
+                \newm{
+                    This is a new notitle "mathnote" tcolorbox 
+                }
+\end{verbatim}
+
+\verb=\newh,\newr,\newp=
+\explain{New asmthm theorem tcolorbox environment with prefixes}
+\begin{verbatim}
+                Example: \newh{
+                    This is a new "hint" asmthm tcolorbox environment 
+                }
+                \newr{
+                    This is a new "remark" asmthm tcolorbox environment 
+                }
+                \newp{
+                    This is a new "proof" asmthm tcolorbox environment 
+                }
+\end{verbatim}
+
+
+\verb=\newq,\newcl,\newd,\newco,\newt,\newl,\newe,\newu,\newch=
+\explain{New TColorBox theorem environment with titles}
+\begin{verbatim}
+                Example: \newq[optional: #EnvName]{#label}{
+                    This is a new "question" tcolorbox theorem environment 
+                }
+                \newcl[optional: #EnvName]{#label}{
+                    This is a new "claim" tcolorbox theorem environment 
+                }
+                \newd[optional: #EnvName]{#label}{"definition"}
+                \newco[optional: #EnvName]{#label}{"corollary"}
+                \newt[optional: #EnvName]{#label}{"theorem"}
+                \newl[optional: #EnvName]{#label}{"lemma"}
+                \newe[optional: #EnvName]{#label}{"exercise"}
+                \newu[optional: #EnvName]{#label}{"unit"}
+                \newch[optional: #EnvName]{#label}{"chapter"}
+\end{verbatim}
+
+\verb=\ref{\#1:#label}=
+\explain{Use ref to reference the environment, where \#1:\#label e.g. is "question:q1"}
+
+\newpage
+\subsection{Math Commands}\hfill
+
+\verb=\numberthis=
+\explain{Add the line number in unnumbered math environment}
+
+\verb=\T[1]{\text{#1}}=
+\explain{Abbreviation of $\backslash$text\{\}}
+
+\begin{verbatim}
+  \Al[3]{#1 &=#2 &\text{#3}&&\\}
+\end{verbatim}
+\ind[20]{(left) = (right) + (explanation)}
+
+\verb=\cd{\cdot}=
+\explain{Abbreviation of $\backslash$cdot}
+
+\verb=\alt[1]{\intertext{#1}}=
+\explain{Insert line between align math equations, $\backslash\backslash$ included}
+
+\begin{verbatim}
+  \bb[1]{\mathbb{#1}}
+  \cal[1]{\mathcal{#1}}
+  \sc[1]{\textsc{#1}}
+\end{verbatim}
+\ind[20]{More shortcuts for mathbb, mathcal, textsc}
+
+\verb=\D{\mathop{}\!\mathrm{d}}=
+\explain{d symbol for differentiation, example: $\backslash$D x}
+
+\begin{verbatim}
+  \DD[2]{\frac{\D #1 }{\D #2}}
+\end{verbatim}
+\ind[20]{Leibniz's notation of differentiation, example: $\backslash$DD\{x\}\{y\}}
+
+\newpage\subsection{Symbol Abbreviations}\hfill
+\begin{verbatim}
+  \C -> \mathbb{C} == complex
+  \R -> \mathbb{R} == reals
+  \Q -> \mathbb{Q} == rationals
+  \Z -> \mathbb{Z} == integers
+  \N -> \mathbb{N} == naturals 
+  \F -> \mathbb{F} == field
+
+  \al -> \alpha
+  \ep -> \varepsilon
+  \p -> \partial
+
+  \? -> \stackrel{?}{=} == question mark on equal sign
+  \ra -> \rightarrow == rightarrow (single line)
+  \Ra -> \Rightarrow == Rightarrow (double lines)
+  \is -> \equiv == equivalent (triple lines)
+  \injective \surjective \bijective
+
+  \arr = angle brackets
+  \bra = parenthesis ()
+  \sqrbra = square brackets []
+  \curbra = curly brackets {}
+  \abs = absolute value | |
+  \ceil = ceiling + () + ceiling
+  \floor = floor + () + floor
+  \near = floor + () + ceiling
+
+  \func[3]{#1: #2 \rightarrow #3} == function (name, domain, codomain)
+  \Pset{#} -> \mathcal{P}(#) == power set
+  \Relate{#}{##} -> #\mathcal{R}## == relation
+  \GF[1][2]{\bb{F}_{#1}} == Galois field, default #1 = 2
+  \modulo[1][n]{\Z/#1\Z} == modulo, default #1 = n
+  
+  \P -> \mathbb{P} == primes
+  \nil -> \varnothing == empty set
+  \O -> \mathcal{O} == big O 
+  \relate -> \mathcal{R} == relate (relation)
+
+\end{verbatim}
+
+\verb==
+\explain{}
+
+\verb==
+\explain{}
+
+\verb==
+\explain{}
+
+\verb==
+\explain{}
+
+\verb==
+\explain{}
+
+
+\newpage
+\section{Other Notable Commands}
+
+\begin{verbatim}
+  \renewcommand{\qedsymbol}
+  {$_{\scriptstyle \substack{\sc{quod}\\\sc{erat}\\\sc{dem}
+  \scalebox{0.53}{$\blacksquare$}}}$}
+\end{verbatim}
+\ind[20]{Modified QED symbol}
+
+\begin{verbatim}
+  \lstnewenvironment{CPP}{\lstset{language=C++}}{}
+\end{verbatim}
+\ind[20]{New environment for C++ et al code listing}
+
+\begin{verbatim}
+                Example (CPP = C++, Cl = C):
+                    \begin{CPP}
+                        hi
+                    \end{CPP}
+\end{verbatim}
+
+
+
+\end{document}
