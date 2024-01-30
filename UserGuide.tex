@@ -64,8 +64,10 @@ Here is the template of a new tex file:
 \verb=\def\maincolor{brown}=
 \explain{Main color, Default: brown}
 
-\verb=\RequirePackage[margin=0.5in]{geometry}=
-\explain{Margin, Default: 0.5in, may change to 1in}
+\begin{verbatim}
+  \RequirePackage[margin=0.5in]{geometry}
+\end{verbatim}
+\ind[20]{Margin, Default: 0.5in, may change to 1in}
 
 \verb=\theoremstyle{definition}=
 \explain{Theorem style from asmthm, Default: definition}
@@ -282,7 +284,7 @@ Here is the template of a new tex file:
     \item To improve readability, the environments should try to not be nested. 
     \item Extend listings and tikzpictures.
     \item The number counters cannot align with section numbers.
-    \item The color box sometimes touch the footer.
+    \item The color box sometimes touches the footer.
 \end{enumerate}
 
 
