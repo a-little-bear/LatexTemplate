@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{alittlebear}[2024/01/30 alittlebear]
+\ProvidesClass{alittlebear}[2024/02/01 alittlebear]
 
 %settings
 \def\filename{\headername \headernum} %name of file
@@ -70,7 +70,18 @@
 %multlined environment inside align
 \RequirePackage{mathtools}
 
-\usepackage{breqn}
+
+
+\RequirePackage{breqn}
+
+\RequirePackage{changepage} % for adjustwidth environment
+\newcommand{\indenv}[2][1]{
+    \begin{adjustwidth}{#1cm}{}
+        #2
+    \end{adjustwidth}
+}
+
+\DeclareMathOperator{\vspan}{text{span}}
 
 
 
@@ -111,6 +122,11 @@
     enforce breakable, left=5mm,
     colback=yellow!3!white, colframe=orange!20!white,
     after upper={\hfill$\smiley$}
+}
+\newtcolorbox{tbox}[2][]{
+    colbacktitle=orange!10!white,
+colback=orange!10!white,coltitle=orange!70!black,
+title={\centering#2},fonttitle=\bfseries,#1
 }
 \newtheorem*{hint}{Hint}
 \tcolorboxenvironment{hint}{

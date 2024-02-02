@@ -82,6 +82,9 @@ Here is the template of a new tex file:
 
 \subsection{Formatting Commands}\hfill
 
+\verb=\indenv[2][1]{\begin{adjustwidth}{#1cm}{}#2\end{adjustwidth}=
+\explain{Indented environment, use package \textit{changepage}}
+
 \verb=\ind[1][5]{\hspace*{#1mm}}=
 \explain{\#1: indentation, Default: 5mm}
 \begin{verbatim}
@@ -158,8 +161,11 @@ Here is the template of a new tex file:
                 \newch[optional: #EnvName]{#label}{"chapter"}
 \end{verbatim}
 
-\verb=\ref{\#1:#label}=
+\verb=\ref{#1:#label}=
 \explain{Use ref to reference the environment, where \#1:\#label e.g. is "question:q1"}
+
+\verb=\tbox[optional:#1]{#2}=
+\explain{optional \#1 define more options, \#2 is the centered title}
 
 \newpage
 \subsection{Math Commands}\hfill
@@ -195,6 +201,11 @@ Here is the template of a new tex file:
   \DD[2]{\frac{\D #1 }{\D #2}}
 \end{verbatim}
 \ind[20]{Leibniz's notation of differentiation, example: $\backslash$DD\{x\}\{y\}}
+
+\verb=\vspan=
+\explain{span in linear algebra, works in math environment}
+
+
 
 \newpage\subsection{Symbol Abbreviations}\hfill
 \begin{verbatim}

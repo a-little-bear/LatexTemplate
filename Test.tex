@@ -1,0 +1,42 @@
+\documentclass[12pt]{alittlebear}
+
+\def\name{1}
+\def\course{2}
+\def\headername{3}
+\def\headernum{4}
+
+\newtcbtheorem{propo}{Proposition}{
+    enhanced,
+    title=Proposition,
+    attach boxed title to top left={yshift=-2.50mm, xshift=2mm},
+    colbacktitle=cyan!90!black,
+    coltitle=white, 
+    opacityback=1,
+    opacityframe=0.8,
+    before skip=10pt,
+    after skip=10pt,
+    colback=cyan!7!white,
+    colframe=cyan!80,
+    boxrule=0.2mm,
+    after upper={\hfill$\textcolor{cyan}{\spadesuit}$},
+    boxed title style={sharp corners, boxrule=0.2mm, colframe=cyan!80}
+}{propo}
+
+
+\begin{document} 
+
+\begin{propo}{}{propo1}
+    hi
+\end{propo}
+
+\indenv[2]{
+    hello
+    \indenv[1]{
+    hello
+    }
+    \indenv[3]{
+    hello
+}
+}
+
+\end{document}  
