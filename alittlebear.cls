@@ -81,8 +81,13 @@
     \end{adjustwidth}
 }
 
-\DeclareMathOperator{\vspan}{text{span}}
+\newcommand{\np}{\newpage}
+\newcommand{\ds}{\displaystyle}
 
+\RequirePackage{mathrsfs}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
 
 
 %number line in * environment, add \lebel{} and refer as \eqref{}
@@ -228,6 +233,7 @@ title={\centering#2},fonttitle=\bfseries,#1
     },interior engine=empty,
     },
     fonttitle=\bfseries,
+    after = {\tcbcnt{question}{0}}
 }{exercise}
 \newtcbtheorem{unit}{Unit}{
     enforce breakable, enhanced, 
@@ -277,11 +283,11 @@ title={\centering#2},fonttitle=\bfseries,#1
 }{chapter}
 
 
-\newcommand{\newq}[3][]{\begin{question}{#1}{q#2}#3\end{question}}
-\newcommand{\newe}[3][]{\begin{exercise}{#1}{e#2}#3\end{exercise}}
+\newcommand{\newq}[3][]{\begin{question}{#1}{#2}#3\end{question}}
+\newcommand{\newe}[3][]{\begin{exercise}{#1}{#2}#3\end{exercise}}
 \newcommand{\newu}[3][]{\begin{unit}{#1}{#2}#3\end{unit}}
-\newcommand{\newch}[3][]{\begin{chapter}{#1}{ch#2}#3\end{chapter}}
-\newcommand{\newd}[3][]{\begin{definition}{#1}{d#2}#3\end{definition}}
+\newcommand{\newch}[3][]{\begin{chapter}{#1}{#2}#3\end{chapter}}
+\newcommand{\newd}[3][]{\begin{definition}{#1}{#2}#3\end{definition}}
 \newcommand{\newl}[3][]{\begin{lemma}{#1}{#2}#3\end{lemma}}
 \newcommand{\newcl}[3][]{\begin{claim}{#1}{#2}#3\end{claim}}
 \newcommand{\newco}[3][]{\begin{corollary}{#1}{#2}#3\end{corollary}}
@@ -352,6 +358,8 @@ title={\centering#2},fonttitle=\bfseries,#1
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\curbra}[1]{\left\{#1\right\}} %set {}
 \newcommand{\func}[3]{#1: #2 \rightarrow #3}
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\DeclareMathOperator{\sgn}{sgn}
 
 
 

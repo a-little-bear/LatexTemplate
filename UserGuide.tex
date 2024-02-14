@@ -102,6 +102,12 @@ Here is the template of a new tex file:
 \verb=\explain[2][20]{\\\ind[#1]{#2}}=
 \explain{\#1: indentation, Default: 20mm, \#2: explanation}
 
+\verb=\np{\newpage}=
+\explain{shortcut for newpage command}
+
+\verb=\ds{\displaystyle}=
+\explain{shortcut for displaystyle command}
+
 \newpage
 \subsection{TColorBox Commands}\hfill
 
@@ -202,8 +208,17 @@ Here is the template of a new tex file:
 \end{verbatim}
 \ind[20]{Leibniz's notation of differentiation, example: $\backslash$DD\{x\}\{y\}}
 
-\verb=\vspan=
-\explain{span in linear algebra, works in math environment}
+\verb=\vspan{span}=
+\explain{span in linear algebra, Math Operator}
+
+\verb=\rank{rank}=
+\explain{rank in linear algebra, Math Operator}
+
+\verb=\im{im}=
+\explain{image in linear algebra, Math Operator}
+
+\verb=\sgn=
+\explain{defined math operator sgn as the sign function}
 
 
 
@@ -231,6 +246,7 @@ Here is the template of a new tex file:
   \sqrbra = square brackets []
   \curbra = curly brackets {}
   \abs = absolute value | |
+  \norm = double absolute || ||
   \ceil = ceiling + () + ceiling
   \floor = floor + () + floor
   \near = floor + () + ceiling
@@ -296,6 +312,7 @@ Here is the template of a new tex file:
     \item Extend listings and tikzpictures.
     \item The number counters cannot align with section numbers.
     \item The color box sometimes touches the footer.
+    \item Make sure use \verb=\np= or \verb=\newpage= for new exercise/unit/chapter so that the page splitting functions properly.
 \end{enumerate}
 
 
