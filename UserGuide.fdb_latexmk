@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1707897232 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/UserGuide.tex" "UserGuide.pdf" "UserGuide" 1707897238 0
-  "UserGuide.aux" 1707897235 1794 0dd98bb6049dd56b432859c2511ab1eb "pdflatex"
-  "UserGuide.out" 1707897235 1730 4f7d0600efcd2da7c7bdeaf3f162dcb5 "pdflatex"
+["pdflatex"] 1707898148 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/UserGuide.tex" "UserGuide.pdf" "UserGuide" 1707898154 0
+  "UserGuide.aux" 1707898151 1794 0dd98bb6049dd56b432859c2511ab1eb "pdflatex"
+  "UserGuide.out" 1707898151 1730 4f7d0600efcd2da7c7bdeaf3f162dcb5 "pdflatex"
   "UserGuide.tex" 1707897225 9028 7691ab9f0c5290ac5c06d0477dff84c0 ""
-  "UserGuide.toc" 1707897235 914 5c71f1963e1aebd97d35df0c7a574735 "pdflatex"
-  "alittlebear.cls" 1707897222 18006 f2778f9c2b6474ee6615336d6baf01ee ""
+  "UserGuide.toc" 1707898151 914 5c71f1963e1aebd97d35df0c7a574735 "pdflatex"
+  "alittlebear.cls" 1707898147 18139 06dd1423d8efab14a5c4aba0ec774914 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1699475139 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1699475139 2840 216e6e45ad352e2456e1149f28885bee ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1699475139 2327 9d6df24f9c4f7368395224341a95523a ""
