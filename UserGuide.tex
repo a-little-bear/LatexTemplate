@@ -82,8 +82,16 @@ Here is the template of a new tex file:
 
 \subsection{Formatting Commands}\hfill
 
-\verb=\indenv[2][1]{\begin{adjustwidth}{#1cm}{}#2\end{adjustwidth}=
+\verb=\indenv[2][1]{\begin{adjustwidth}{#1cm}{}#2\end{adjustwidth}}=
 \explain{Indented environment, use package \textit{changepage}}
+\begin{verbatim}
+                Example: \indenv{
+                    This is an indented environment (multiple paragraphs)
+                }
+                \indenv[10]{
+                    This is an indented environment with 10mm indentation
+                }
+\end{verbatim}
 
 \verb=\ind[1][5]{\hspace*{#1mm}}=
 \explain{\#1: indentation, Default: 5mm}
@@ -217,7 +225,7 @@ Here is the template of a new tex file:
 \verb=\im{im}=
 \explain{image in linear algebra, Math Operator}
 
-\verb=\sgn=
+\verb=\sgn{sgn}=
 \explain{defined math operator sgn as the sign function}
 
 
@@ -232,7 +240,13 @@ Here is the template of a new tex file:
   \F -> \mathbb{F} == field
 
   \al -> \alpha
+  \be -> \beta
+  \ga -> \gamma
+  \Ga -> \Gamma
   \ep -> \varepsilon
+  \de -> \delta
+  \sig -> \sigma
+  \Sig -> \Sigma
   \p -> \partial
 
   \? -> \stackrel{?}{=} == question mark on equal sign

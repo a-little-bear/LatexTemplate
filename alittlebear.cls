@@ -343,8 +343,13 @@ title={\centering#2},fonttitle=\bfseries,#1
 \newcommand{\?}{\stackrel{?}{=}}
 \newcommand{\is}{\equiv}
 \newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
 \newcommand{\ep}{\varepsilon}
-%\renewcommand{\phi}{\varphi}
+\newcommand{\de}{\delta}
+\newcommand{\sig}{\sigma}
+\newcommand{\Sig}{\Sigma}
 \newcommand{\p}{\partial}
 \newcommand{\injective}{\hookrightarrow}
 \newcommand{\surjective}{\twoheadrightarrow}
