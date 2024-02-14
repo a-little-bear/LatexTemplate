@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 03:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 03:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1232,15 +1232,15 @@ Package rerunfilecheck Info: File `UserGuide.out' has not changed.
 (rerunfilecheck)             Checksum: 4F7D0600EFCD2DA7C7BDEAF3F162DCB5;1730.
  ) 
 Here is how much of TeX's memory you used:
- 36329 strings out of 474272
- 747709 string characters out of 5744472
+ 36331 strings out of 474272
+ 747713 string characters out of 5744472
  1941533 words of memory out of 5000000
- 57628 multiletter control sequences out of 15000+600000
+ 57630 multiletter control sequences out of 15000+600000
  597327 words of font info for 107 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  132i,11n,135p,1128b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on UserGuide.pdf (9 pages, 183067 bytes).
+Output written on UserGuide.pdf (9 pages, 183249 bytes).
 PDF statistics:
  180 PDF objects out of 1000 (max. 8388607)
  149 compressed objects within 2 object streams

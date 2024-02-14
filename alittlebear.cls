@@ -329,6 +329,9 @@ title={\centering#2},fonttitle=\bfseries,#1
 \DeclareRobustCommand{\tsc}[1]{\textsc{#1}}
 \DeclareRobustCommand{\tbf}[1]{\textbf{#1}}
 
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\ie}{\text{ i.e. }}
+
 
 \newcommand\D{\mathop{}\!\mathrm{d}}
 % Derivartive in Leibniz notation d{#1}/d{#2}
