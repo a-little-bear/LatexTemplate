@@ -1,12 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{alittlebear}[2024/02/01 alittlebear]
+\ProvidesClass{alittlebear}[2024/02/14 alittlebear]
 
 %settings
 \def\filename{\headername \headernum} %name of file
-\setlength\parindent{0pt} %paragraph indent
+\def\skippar{5pt} %skip between paragraphs
+\def\indentpar{0pt} %indent of paragraph
 \def\maincolor{brown} %main color for footer header and hyperlinks
-
-
+\def\marginsize{0.5in} %margin of the page, 1in 0.5in etc
+\def\thmstyle{definition} %asmthm theorme style
 
 %Header and footer
 \RequirePackage{xcolor, fancyhdr, lastpage, fourier-orns, pgfornament}
@@ -61,7 +62,7 @@
 
 
 %Required Packages and settings
-\RequirePackage[margin=0.5in]{geometry} %Default margin is 0.5inch / 1inch
+\RequirePackage[margin=\marginsize]{geometry} %Default margin is 0.5inch / 1inch
 \RequirePackage{lmodern, enumitem, needspace} % dynamic line breaking
 \RequirePackage{hyperref} % for pdf bookmarks, other information and org-mode
 \hypersetup {pdfstartview=FitH, colorlinks=true, linkcolor=\maincolor}
@@ -100,7 +101,7 @@
 \RequirePackage[breakable, skins, theorems]{tcolorbox}
 %use \tcblower for break
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
-\theoremstyle{definition}
+\theoremstyle{\thmstyle}
 \newcommand{\qbreak}{\tcblower}
 \newcommand{\envbreak}{%
   \begin{tikzpicture}
@@ -495,3 +496,4 @@ title={\centering#2},fonttitle=\bfseries,#1
 
 %idk why putting before does not work, anyway
 \pagestyle{style}
+\RequirePackage[skip=\skippar, indent=\indentpar]{parskip}

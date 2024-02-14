@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 01:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 02:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8,7 +8,7 @@ entering extended mode
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
 (./alittlebear.cls
-Document Class: alittlebear 2024/02/01 alittlebear
+Document Class: alittlebear 2024/02/14 alittlebear
 (c:/Program Files/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -525,7 +525,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip68
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 67.
+Package hyperref Info: Option `colorlinks' set `true' on input line 68.
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -789,8 +789,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \c@tcb@cnt@exercise=\count354
 \c@tcb@cnt@unit=\count355
 \c@tcb@cnt@chapter=\count356
-LaTeX Info: Redefining \frak on input line 316.
-LaTeX Info: Redefining \bf on input line 317.
+LaTeX Info: Redefining \frak on input line 319.
+LaTeX Info: Redefining \bf on input line 320.
  (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 \pgf@intersect@solutions=\count357
 )) (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
@@ -896,7 +896,11 @@ File: tikzlibrarythrough.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
 File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
+)) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+Couldn't patch \@starttoc
+)
 \c@tcb@cnt@propo=\count359
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 26.
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -1067,7 +1071,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+futs on input line 48.
+LaTeX Font Info:    Trying to load font information for U+futs on input line 56.
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2021/11/24 Fontinst v1.933 font definitions for U/futs.
 )
@@ -1094,15 +1098,15 @@ Package rerunfilecheck Info: File `Test.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36379 strings out of 474272
- 748991 string characters out of 5744472
- 1933533 words of memory out of 5000000
- 57692 multiletter control sequences out of 15000+600000
- 606914 words of font info for 116 fonts, out of 8000000 for 9000
+ 36426 strings out of 474272
+ 750019 string characters out of 5744472
+ 1937533 words of memory out of 5000000
+ 57730 multiletter control sequences out of 15000+600000
+ 607175 words of font info for 119 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  132i,11n,135p,1123b,1428s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on Test.pdf (1 page, 163147 bytes).
+Output written on Test.pdf (1 page, 164106 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1707891717 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/Test.tex" "Test.pdf" "Test" 1707891719 0
-  "Test.aux" 1707891719 446 e6b54e01697d4bc7aaa057e3d053e93e "pdflatex"
-  "Test.out" 1707891719 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Test.tex" 1707891716 978 811c6d5ff3770dd0fde70c1681db8489 ""
-  "alittlebear.cls" 1707891663 17724 e569d6c07906ba867befcff18176614c ""
+["pdflatex"] 1707897201 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/Test.tex" "Test.pdf" "Test" 1707897204 0
+  "Test.aux" 1707897204 446 e6b54e01697d4bc7aaa057e3d053e93e "pdflatex"
+  "Test.out" 1707897204 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Test.tex" 1707897200 2314 445afbead4c9da73f636036f913ed553 ""
+  "alittlebear.cls" 1707897187 18006 f2778f9c2b6474ee6615336d6baf01ee ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1699475139 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1699475139 2840 216e6e45ad352e2456e1149f28885bee ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1699475139 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -257,6 +257,7 @@
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg" 1699475858 5929 0e1d31c98c10fece90f470d5746ecdd6 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg" 1699475858 5594 45ca1ba048c2fa6267d5419cc463d804 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/needspace/needspace.sty" 1699476314 852 0e34dbb72efc69fa07602405ad95585e ""
+  "c:/Program Files/texlive/2023/texmf-dist/tex/latex/parskip/parskip.sty" 1699476800 4288 94714aa7f535440f33181fec52a31963 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/pdfcol/pdfcol.sty" 1699476853 8086 ac143843b6ea88d172677dc3ed532925 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1699476961 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1699476961 373 00b204b1d7d095b892ad31a7494b0373 ""
@@ -293,7 +294,7 @@
   "c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1699479960 4753631 ce11096d3ddebebb488d7abe23a051aa ""
   "c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1699480103 8213025 3bd61feff7b9dff35f8a668730b4a750 ""
   "c:/Program Files/texlive/2023/texmf.cnf" 1699479938 713 e69b156964470283e0530f5060668171 ""
-  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/Test.tex" 1707891716 978 811c6d5ff3770dd0fde70c1681db8489 ""
+  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/Test.tex" 1707897200 2314 445afbead4c9da73f636036f913ed553 ""
   (generated)
   "Test.aux"
   "Test.log"

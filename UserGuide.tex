@@ -58,18 +58,19 @@ Here is the template of a new tex file:
 
 \subsection{Document Class}\hfill
 
-\verb=\setlength\parindent{0pt}=
-\explain{Indentation, Default: 0pt}
+\verb=\skippar{5pt}=
+\explain{Space between paragraphs, Default: 5pt}
+
+\verb=\indentpar{0pt}=
+\explain{Indentation of the first line of a paragraph, Default: 0pt}
 
 \verb=\def\maincolor{brown}=
 \explain{Main color, Default: brown}
 
-\begin{verbatim}
-  \RequirePackage[margin=0.5in]{geometry}
-\end{verbatim}
-\ind[20]{Margin, Default: 0.5in, may change to 1in}
+\verb=\marginsize{0.5in}=
+\explain{margin of the pages, may change to 0.5in 1in etc}
 
-\verb=\theoremstyle{definition}=
+\verb=\thmstyle{definition}=
 \explain{Theorem style from asmthm, Default: definition}
 
 
