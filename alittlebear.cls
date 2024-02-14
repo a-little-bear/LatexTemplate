@@ -127,7 +127,7 @@
     before skip=10pt, after skip=10pt,
     enforce breakable, left=5mm,
     colback=yellow!3!white, colframe=orange!20!white,
-    after upper={\hfill$\smiley$}
+    after upper={\hfill$\smiley$},
 }
 \newtcolorbox{tbox}[2][]{
     colbacktitle=orange!10!white,
@@ -297,10 +297,13 @@ title={\centering#2},fonttitle=\bfseries,#1
 \newcommand{\newt}[3][]{\begin{theorem}{#1}{#2}#3\end{theorem}}
 
 \newcommand{\newr}[1]{\begin{remark}#1\end{remark}}
-\newcommand{\newn}[1]{\begin{note}#1\end{note}}
-\newcommand{\newm}[1]{\begin{mathnote}#1\end{mathnote}}
+\newcommand{\newn}[1]{\begin{note}
+    \parskip=\skippar\parindent=\indentpar#1\end{note}}
+\newcommand{\newm}[1]{\begin{mathnote}
+    \parskip=\skippar\parindent=\indentpar#1\end{mathnote}}
 \newcommand{\newh}[1]{\begin{hint}#1\end{hint}}
-\newcommand{\newp}[1]{\begin{proof}#1\end{proof}}
+\newcommand{\newp}[1]{\begin{proof}
+    \parskip=\skippar\parindent=\indentpar#1\end{proof}}
 
 
 
