@@ -43,7 +43,7 @@
 \newcommand{\ind}[1][5]{\hspace*{#1mm}}
 \newcommand{\unind}[1][5]{\hspace*{-#1mm}}
 \newcommand{\explain}[2][20]{\\\ind[#1] {#2}}
-\newcommand{\tbf}[1]{\textbf{#1}}
+
 
 
 %Define options of DocumentClass
@@ -257,6 +257,7 @@ title={\centering#2},fonttitle=\bfseries,#1
     },interior engine=empty,
     },
     fonttitle=\bfseries,
+    after = {\tcbcnt{question}{0}}
 }{unit}
 \newtcbtheorem{chapter}{Chapter}{
     enforce breakable, enhanced, 
@@ -280,6 +281,7 @@ title={\centering#2},fonttitle=\bfseries,#1
     },interior engine=empty,
     },
     fonttitle=\bfseries,
+    after = {\tcbcnt{question}{0}}
 }{chapter}
 
 
@@ -312,7 +314,17 @@ title={\centering#2},fonttitle=\bfseries,#1
 % new and renewed commands
 \DeclareRobustCommand{\bb}[1]{\mathbb{#1}}
 \DeclareRobustCommand{\cal}[1]{\mathcal{#1}}
-\DeclareRobustCommand{\sc}[1]{\textsc{#1}}
+\DeclareRobustCommand{\scr}[1]{\mathscr{#1}}
+\DeclareRobustCommand{\frak}[1]{\mathfrak{#1}}
+\DeclareRobustCommand{\bf}[1]{\mathbf{#1}}
+
+\DeclareRobustCommand{\tit}[1]{\textit{#1}}
+\DeclareRobustCommand{\trm}[1]{\textrm{#1}}
+\DeclareRobustCommand{\tsf}[1]{\textsf{#1}}
+\DeclareRobustCommand{\ttt}[1]{\texttt{#1}}
+\DeclareRobustCommand{\tsc}[1]{\textsc{#1}}
+\DeclareRobustCommand{\tbf}[1]{\textbf{#1}}
+
 
 \newcommand\D{\mathop{}\!\mathrm{d}}
 % Derivartive in Leibniz notation d{#1}/d{#2}

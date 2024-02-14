@@ -2,8 +2,8 @@ PWD c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/
 INPUT c:/Program Files/texlive/2023/texmf.cnf
 INPUT c:/Program Files/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/Test.tex
-OUTPUT Test.log
+INPUT c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/Example.tex
+OUTPUT Example.log
 INPUT ./alittlebear.cls
 INPUT alittlebear.cls
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -393,10 +393,10 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT ./Test.aux
-INPUT ./Test.aux
-INPUT Test.aux
-OUTPUT Test.aux
+INPUT ./Example.aux
+INPUT ./Example.aux
+INPUT Example.aux
+OUTPUT Example.aux
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -448,17 +448,18 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/wasysym/uwasy.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy5.tfm
-INPUT ./Test.out
-INPUT ./Test.out
-INPUT Test.out
-INPUT Test.out
-INPUT ./Test.out
-INPUT ./Test.out
-OUTPUT Test.out
-OUTPUT Test.pdf
+INPUT ./Example.out
+INPUT ./Example.out
+INPUT Example.out
+INPUT Example.out
+INPUT ./Example.out
+INPUT ./Example.out
+OUTPUT Example.out
+OUTPUT Example.pdf
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
@@ -485,28 +486,7 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy8.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy6.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-euf.cfg
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-euf.cfg
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/microtype/mt-euf.cfg
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmss.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmss12.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmcsc10.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmtt12.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/fourier/ufuts.fd
@@ -517,26 +497,27 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/vf/public/fourier/futrorn.vf
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/vf/public/fourier/futrorn.vf
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
-INPUT Test.aux
-INPUT ./Test.out
-INPUT ./Test.out
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT Example.aux
+INPUT ./Example.out
+INPUT ./Example.out
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
+INPUT c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb

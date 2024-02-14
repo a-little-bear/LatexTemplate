@@ -40,19 +40,24 @@
     }
 }
 
+
+\newpage
 \newch[Non-Trivial Chapter]{chp1}{ 
     \newn{
         \quad Recall that we have already explained in lecture that all rational function of a single variable can be integrated in finite terms. Starting from there, we introduce integrals of the form, known as the \textbf{binomial integrals}:
         \[\begin{aligned}J_{p,q}=\int(a+bz)^pz^q\D z,a,b\in\mathbb{R},p,q\in\mathbb{Q}. \end{aligned} \numberthis \label{eq1}\]
     
         This exercise aims at studying the rationalization of the binomial integral, as well as some of its applications.
-        }
-    \retcbcnt{question}
+    }
     \newq{c1q1}{
         Assume that $p\in\Z$, rationalise the integrand.
        \qbreak
-       \newn{
-            Since $q\in\Q$, this implies there exists $m\in\Z, n\in\N$ such that $q=\frac{m}{n}$. Then, $J_{p,q}$ can be written as \[\begin{aligned}J_{p,q}=\int(a+bz)^pz^{\frac{m}{n}}\D z.\end{aligned}\] Let $z=x^n$, then $\D z=n\cd x^{n-1}\D x$. Replace $z$ with $x$ we have \[\begin{aligned}J_{p,q}=\int(a+b\cd x^n)^p \cd (x^n)^{\frac{m}{n}}\cd n\cd x^{n-1}\D x.\end{aligned}\] Simplify it and we get \[\begin{aligned}J_{p,q}=n\int(a+b\cd x^n)^p \cd x^{m+n-1}\D x.\end{aligned}\] Now, by binomial theorem we can see the integrand is rationalised, as needed.
+       \newm{
+            Since $q\in\Q$, this implies there exists $m\in\Z, n\in\N$ such that $q=\frac{m}{n}$. Then, $J_{p,q}$ can be written as \[\begin{aligned}J_{p,q}=\int(a+bz)^pz^{\frac{m}{n}}\D z.\end{aligned}\] Let $z=x^n$, then $\D z=n\cd x^{n-1}\D x$. Replace $z$ with $x$ we have 
+            
+            \[\begin{aligned}J_{p,q}=\int(a+b\cd x^n)^p \cd (x^n)^{\frac{m}{n}}\cd n\cd x^{n-1}\D x.\end{aligned}\] 
+            
+            Simplify it and we get \[\begin{aligned}J_{p,q}=n\int(a+b\cd x^n)^p \cd x^{m+n-1}\D x.\end{aligned}\] Now, by binomial theorem we can see the integrand is rationalised, as needed.
        }
     }
 }
@@ -65,6 +70,16 @@
 }
 \newco{co1}{
     This is a corollary.
+}
+
+\newe{e2}{
+    \newq{q2}{
+        We can see the question counter is auto reset to 1 when we start a new exercise / chapter / unit.
+        \qbreak
+        \newp{
+            Proof by alittlebear.cls code, left as an exercise to the reader :)
+        }
+    }
 }
 
 \end{document}

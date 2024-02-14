@@ -108,13 +108,38 @@ Here is the template of a new tex file:
 \explain{\#1: unindentation, Default: -5mm}
 
 \verb=\explain[2][20]{\\\ind[#1]{#2}}=
-\explain{\#1: indentation, Default: 20mm, \#2: explanation}
+\explain{\#1: indentation, Default: 20mm, \#2: explanation}\\
 
 \verb=\np{\newpage}=
-\explain{shortcut for newpage command}
 
-\verb=\ds{\displaystyle}=
-\explain{shortcut for displaystyle command}
+\verb=\ds{\displaystyle}=\\
+
+\verb=\bb{\mathbb}=
+
+\verb=\cal{\mathcal}=
+
+\verb=\scr{\mathscr}=
+
+\verb=\frak{\mathfrak}=
+
+\verb=\bf{\mathbf}=
+\explain{shortcut for math fonts command}\\
+
+\verb=\tit{\textit}=
+
+\verb=\trm{\textrm}=
+
+\verb=\tsf{\textsf}=
+
+\verb=\ttt{\texttt}=
+
+\verb=\tsc{\textsc}=
+
+\verb=\tbf{\textbf}=
+\explain{shortcut for text fonts command}\\
+
+
+
 
 \newpage
 \subsection{TColorBox Commands}\hfill
@@ -129,7 +154,7 @@ Here is the template of a new tex file:
 \explain{Set the counter for tcolorbox theorem environment}
 
 \verb=\retcbcnt=
-\explain{Reset the counter for tcolorbox theorem environment}
+\explain{Reset the counter for tcolorbox theorem environment}\\
 
 \verb=\newn,\newm=
 \explain{New notitle tcolorbox}
@@ -173,7 +198,7 @@ Here is the template of a new tex file:
                 \newe[optional: #EnvName]{#label}{"exercise"}
                 \newu[optional: #EnvName]{#label}{"unit"}
                 \newch[optional: #EnvName]{#label}{"chapter"}
-\end{verbatim}
+\end{verbatim}\\
 
 \verb=\ref{#1:#label}=
 \explain{Use ref to reference the environment, where \#1:\#label e.g. is "question:q1"}
@@ -277,22 +302,6 @@ Here is the template of a new tex file:
   \relate -> \mathcal{R} == relate (relation)
 
 \end{verbatim}
-
-\verb==
-\explain{}
-
-\verb==
-\explain{}
-
-\verb==
-\explain{}
-
-\verb==
-\explain{}
-
-\verb==
-\explain{}
-
 
 \newpage
 \section{Other Notable Commands}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 01:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 01:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -789,7 +789,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \c@tcb@cnt@exercise=\count354
 \c@tcb@cnt@unit=\count355
 \c@tcb@cnt@chapter=\count356
-LaTeX Info: Redefining \sc on input line 315.
+LaTeX Info: Redefining \frak on input line 316.
+LaTeX Info: Redefining \bf on input line 317.
  (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 \pgf@intersect@solutions=\count357
 )) (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
@@ -1089,6 +1090,25 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.10646pt}.
 
 [2{c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (20.0pt): 
 (fancyhdr)                Make it at least 23.79996pt, for example:
@@ -1102,6 +1122,13 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.10646pt}.
 
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+
+ []
+
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 201.
+
 
 Package fancyhdr Warning: \headheight is too small (20.0pt): 
 (fancyhdr)                Make it at least 23.79996pt, for example:
@@ -1115,12 +1142,12 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.10646pt}.
 
 [4]
-LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 191.
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 216.
  (c:/Program Files/texlive/2023/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 191.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 216.
 
 
 Package fancyhdr Warning: \headheight is too small (20.0pt): 
@@ -1173,20 +1200,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.10646pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.10646pt}.
 
-[8]
-
-Package fancyhdr Warning: \headheight is too small (20.0pt): 
-(fancyhdr)                Make it at least 23.79996pt, for example:
-(fancyhdr)                \setlength{\headheight}{23.79996pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.79996pt}.
-
-
-Package fancyhdr Warning: \footskip is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.10646pt, for example:
-(fancyhdr)                \setlength{\footskip}{14.10646pt}.
-
-[9] 
+[8] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./UserGuide.aux)
  ***********
@@ -1197,18 +1211,18 @@ Package rerunfilecheck Info: File `UserGuide.out' has not changed.
 (rerunfilecheck)             Checksum: 4F7D0600EFCD2DA7C7BDEAF3F162DCB5;1730.
  ) 
 Here is how much of TeX's memory you used:
- 36275 strings out of 474272
- 746699 string characters out of 5744472
+ 36287 strings out of 474272
+ 746739 string characters out of 5744472
  1941533 words of memory out of 5000000
- 57577 multiletter control sequences out of 15000+600000
+ 57590 multiletter control sequences out of 15000+600000
  597327 words of font info for 107 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 132i,12n,135p,1128b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,11n,135p,1128b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on UserGuide.pdf (9 pages, 182657 bytes).
+Output written on UserGuide.pdf (8 pages, 181978 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  14949 words of extra memory for PDF output out of 17280 (max. 10000000)
 

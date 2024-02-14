@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1707890650 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/UserGuide.tex" "UserGuide.pdf" "UserGuide" 1707890653 0
-  "UserGuide.aux" 1707890652 1794 47403925941367bfa9e7c1e501071d93 "pdflatex"
-  "UserGuide.out" 1707890652 1730 4f7d0600efcd2da7c7bdeaf3f162dcb5 "pdflatex"
-  "UserGuide.tex" 1707890647 8809 cd9a50317a8b4516debf99f0bc6235d4 ""
-  "UserGuide.toc" 1707890652 914 4db171e264830668311c5f26a58cb1ec "pdflatex"
-  "alittlebear.cls" 1707890609 17389 515f3abcf3d4b5a0a53bceedb53a4523 ""
+["pdflatex"] 1707892005 "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/UserGuide.tex" "UserGuide.pdf" "UserGuide" 1707892009 0
+  "UserGuide.aux" 1707892007 1794 38e504c507cbb463369f61521a6cc5c2 "pdflatex"
+  "UserGuide.out" 1707892007 1730 4f7d0600efcd2da7c7bdeaf3f162dcb5 "pdflatex"
+  "UserGuide.tex" 1707892001 8978 b0fd850d7262a5a9a7667859ea603fe0 ""
+  "UserGuide.toc" 1707892007 914 b62a8456a17baf8c0dddc9c8594c257e "pdflatex"
+  "alittlebear.cls" 1707891663 17724 e569d6c07906ba867befcff18176614c ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1699475139 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1699475139 2840 216e6e45ad352e2456e1149f28885bee ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1699475139 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -285,7 +285,7 @@
   "c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1699479960 4753631 ce11096d3ddebebb488d7abe23a051aa ""
   "c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1699480103 8213025 3bd61feff7b9dff35f8a668730b4a750 ""
   "c:/Program Files/texlive/2023/texmf.cnf" 1699479938 713 e69b156964470283e0530f5060668171 ""
-  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/UserGuide.tex" 1707890647 8809 cd9a50317a8b4516debf99f0bc6235d4 ""
+  "c:/Users/alitt/OneDrive - University of Toronto/Courses/Other Courses/Other/Homework Template/Template-Homework-Project/UserGuide.tex" 1707892001 8978 b0fd850d7262a5a9a7667859ea603fe0 ""
   (generated)
   "UserGuide.aux"
   "UserGuide.log"
