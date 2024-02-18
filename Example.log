@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 02:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.8)  14 FEB 2024 03:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -789,8 +789,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \c@tcb@cnt@exercise=\count354
 \c@tcb@cnt@unit=\count355
 \c@tcb@cnt@chapter=\count356
-LaTeX Info: Redefining \frak on input line 319.
-LaTeX Info: Redefining \bf on input line 320.
+LaTeX Info: Redefining \frak on input line 322.
+LaTeX Info: Redefining \bf on input line 323.
  (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 \pgf@intersect@solutions=\count357
 )) (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
@@ -1125,15 +1125,15 @@ Package rerunfilecheck Info: File `Example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36393 strings out of 474272
- 750056 string characters out of 5744472
- 1960533 words of memory out of 5000000
- 57723 multiletter control sequences out of 15000+600000
+ 36395 strings out of 474272
+ 750060 string characters out of 5744472
+ 1961533 words of memory out of 5000000
+ 57725 multiletter control sequences out of 15000+600000
  593952 words of font info for 102 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  132i,15n,135p,1126b,2599s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb>
-Output written on Example.pdf (2 pages, 183732 bytes).
+Output written on Example.pdf (2 pages, 181716 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  82 compressed objects within 1 object stream
