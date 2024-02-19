@@ -20,109 +20,204 @@
 
 
 \newtcolorbox{note}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
     notitle,
     enforce breakable, left=5mm,
     opacityback=0.3, opacityframe=0.3,
     before skip=10pt, after skip=10pt,
-    colback=gray!3!white, colframe=gray!30!white
+    colback=gray!3!white, colframe=gray!30!white,
+    opacityback=\thmopacity,
+    opacityframe=\thmopacity,
 }
 \RequirePackage{wasysym} %\smiley
 \newtcolorbox{mathnote}{
     notitle,
-    opacityback=0.8, opacityframe=0.8,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
     before skip=10pt, after skip=10pt,
     enforce breakable, left=5mm,
     colback=yellow!3!white, colframe=orange!20!white,
     after upper={\hfill$\smiley$},
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }
 \newtcolorbox{tbox}[2][]{
     colbacktitle=orange!10!white,
     colback=orange!10!white,coltitle=orange!70!black,
     opacityframe=0.3,
-    title={\centering#2},fonttitle=\bfseries,#1
+    title={\centering#2},fonttitle=\bfseries,#1,
+    opacitybacktitle=\thmopacity,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }
 \newtheorem*{hint}{Hint}
 \tcolorboxenvironment{hint}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
     before skip=10pt, after skip=10pt,
     colback=yellow!30!white, colframe=yellow!30!white,
     after upper={\hfill$\bigstar$}
 }{}
 \newtheorem{remark}{Remark}
 \tcolorboxenvironment{remark}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
     before skip=10pt, after skip=10pt,
     colback=orange!15!white, colframe=orange!15!white,
     after upper={\hfill\textcolor{ecolor}{$\triangle$}}
 }{}
 \tcolorboxenvironment{proof}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
     enforce breakable, left=5mm,
-    opacityback=0.8, opacityframe=0.8,
+    opacityback=\thmopacity-0.1, opacityframe=\thmopacity-0.1,
     before skip=10pt, after skip=10pt,
     colback=yellow!3!white, colframe=orange!20!white
 }{}
 \newtcbtheorem{question}{Question}{
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    opacitybacktitle=\thmopacity,
     colframe=blue!30!white, colback=blue!3!white,
     colbacktitle=blue!10!white, coltitle=red!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\textit{?}\,$}}
+    after upper={\hfill\textcolor{ecolor}{$\textit{?}\,$}},
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }{question}
 \newtcbtheorem{claim}{Claim}{
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
     attach boxed title to top left = {yshift=-0.50mm, xshift=0mm},
     colframe=pink!70, colback=pink!30!white,
     colbacktitle=pink!40!white, coltitle=pink!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\lozenge$}}
+    after upper={\hfill\textcolor{ecolor}{$\lozenge$}},
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    ,boxed title style={
+        opacityback=\thmopacity, 
+        opacityframe=\thmopacity, 
+        colupper=textcol,
+        collower=textcol,
+        coltitle=textcol,
+        coltext=textcol,
+    },
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }{claim}
 \newtcbtheorem{definition}{Definition}{
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
     attach boxed title to top text left = {yshift=-2.50mm},
     colframe=olive!50!white, colback=olive!5!white,
     colbacktitle=olive!10!white, coltitle=olive!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\clubsuit$}}
+    after upper={\hfill\textcolor{ecolor}{$\clubsuit$}},
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    opacitybacktitle=\thmopacity,
+    ,boxed title style={
+        opacityback=\thmopacity,
+        opacityframe=\thmopacity,
+        colupper=textcol,
+        collower=textcol,
+        coltitle=textcol,
+        coltext=textcol,
+    },
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }{definition}
 \newtcbtheorem{corollary}{Corollary}{
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
     attach boxed title to top text left = {yshift=-2.50mm},
     colframe=green!50!white, colback=green!2!white,
     colbacktitle=green!10!white, coltitle=green!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    opacitybacktitle=\thmopacity,
     after upper={\hfill\textcolor{ecolor}{$\heartsuit$}}
+    ,boxed title style={
+        opacityback=\thmopacity,
+        opacityframe=\thmopacity,
+        colupper=textcol,
+        collower=textcol,
+        coltitle=textcol,
+        coltext=textcol,
+    },
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }{corollary}
 \newtcbtheorem{theorem}{Theorem}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
     attach boxed title to top text left = {yshift=-2.50mm},
     colframe=cyan!50!white, colback=cyan!2!white,
     colbacktitle=cyan!10!white, coltitle=cyan!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    opacitybacktitle=\thmopacity,
+    ,boxed title style={
+        opacityback=\thmopacity,
+        opacityframe=\thmopacity,
+        colupper=textcol,
+        collower=textcol,
+        coltitle=textcol,
+        coltext=textcol,
+    },
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }{theorem}
 \newtcbtheorem{lemma}{Lemma}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
     enforce breakable, enhanced,
-    opacityback=0.8, opacityframe=0.8,
     attach boxed title to top text left = {yshift=-2.50mm},
     colframe=teal!40!white, colback=teal!4!white,
     colbacktitle=teal!10!white, coltitle=teal!40!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\spadesuit$}}
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    after upper={\hfill\textcolor{ecolor}{$\spadesuit$}},
+    opacitybacktitle=\thmopacity,
+    ,boxed title style={
+        opacityback=\thmopacity,
+        opacityframe=\thmopacity,
+        colupper=textcol,
+        collower=textcol,
+        coltitle=textcol,
+        coltext=textcol,
+    },
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
 }{lemma}
 \RequirePackage{varwidth}
 \newtcbtheorem{exercise}{Exercise}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
+    opacityback=\thmopacity, opacityframe=\thmopacity, 
     enforce breakable, enhanced,
     before skip=2mm, after skip=2mm,
     colback=black!5, colframe=black!50, boxrule=0.2mm,
@@ -147,6 +242,10 @@
     after = {\tcbcnt{question}{0}}
 }{exercise}
 \newtcbtheorem{unit}{Unit}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
     enforce breakable, enhanced,
     before skip=2mm, after skip=2mm,
     colback=black!5, colframe=black!50, boxrule=0.2mm,
@@ -171,6 +270,10 @@
     after = {\tcbcnt{question}{0}}
 }{unit}
 \newtcbtheorem{chapter}{Chapter}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
+    opacityback=\thmopacity, opacityframe=\thmopacity,
     enforce breakable, enhanced,
     before skip=2mm, after skip=2mm,
     colback=black!5, colframe=black!50, boxrule=0.2mm,

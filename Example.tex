@@ -1,4 +1,4 @@
-\documentclass[12pt, brown, sepia, 0.5in]{alittlebear}
+\documentclass[12pt, sakura, night, 0.5in]{alittlebear}
 
 \usepackage{clsfiles/mat240}
 \usepackage{clsfiles/csc240}
@@ -12,7 +12,7 @@
 
 \begin{document} 
 
-\coverpage[clsfiles/sao]
+\coverpage[clsfiles/night]
 
 \tableofcontents
 
@@ -183,6 +183,8 @@ All available boxes are also shown below
     }
 }
 
+\newt{1}{Random theorem.}
+
 \newu{1}{
     \newn{
         Note. This is the only box that does not have an ending pattern :)
@@ -207,6 +209,7 @@ The usage of the package \tit{listings} is as follows:
 The defualt langauge for environment \tit{code} is Python, can be changed in the cls file.
 
 \begin{code}
+    # This is a bubble sort algorithm
     def bubble_sort(lst):
     n = len(lst)
     for i in range(n):
@@ -214,6 +217,7 @@ The defualt langauge for environment \tit{code} is Python, can be changed in the
             if lst[j] > lst[j + 1]:
                 lst[j], lst[j + 1] = lst[j + 1], lst[j]
     return lst
+    print("Hello World")
 \end{code}
 
 There is also a specialized latex code environment.

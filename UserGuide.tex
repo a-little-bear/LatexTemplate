@@ -47,14 +47,14 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 
 \subsection{Document Preamble}\hfill
 
-\verb=\documentclass[#pt,#in,{geye,hazy,sepia},{green,cyan,blue,sakura,black,brown}]{alittlebear}=
+\verb=\documentclass[#pt,#in,{geye,hazy,sepia,night},{green,cyan,blue,sakura,black,brown,white}]{alittlebear}=
 
 \indenv[2]{
     \#pt: font size, default 12pt, 9pt to 13pt
 
     \#in: margin, 1in or 0.5in
 
-    \{geye, hazy, sepia\}: green, white, or yellow background
+    \{geye, hazy, sepia, night\}: green, white, or yellow background; or dark mode (best with white or sakura)
 
     \{green...\}: main color
 }
@@ -93,6 +93,11 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 \verb=\defaultlanguage{python}=
 \explain{Default Language for listings}
 
+\verb=\thmopacity{0.8}=
+\explain{Opacity of light mode tcolorbox (night mode -0.1), Default: 0.8}
+
+\verb=\nightmodebackground{\clsfiles/nightsky}=
+\explain{Background image for night mode}
 
 
 
