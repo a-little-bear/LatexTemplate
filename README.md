@@ -23,6 +23,7 @@ Thanks:
 for some of the commands...
 
 Structure:
+```
 ├── README.md
 ├── clsfiles/
 │   ├── shortcuts.sty
@@ -36,3 +37,4 @@ Structure:
 ├── alittlebear.cls
 ├── Examples.tex
 └── UserGuide.tex
+```
