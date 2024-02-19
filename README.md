@@ -1,6 +1,6 @@
 # Introduction
 
-This is a latex template for homework / note taking. The main feature of this template is the tcolorboxes with different colors, and ending symbols. Moreover, the abbreviations of all these tcolor theorem boxes environments help the user effectively record notes during lectures.
+This is a latex template for homework / note taking. The main feature of this template is the tcolorboxes with different colors, and ending symbols. Moreover, the abbreviations of all these tcolor theorem boxes environments help the user effectively records notes during lectures.
 
 Furthermore, there are some additional packages designed for specific courses, e.g., MAT240, CSC240.
 
