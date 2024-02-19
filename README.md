@@ -4,7 +4,7 @@ This is a latex template for homework / note taking. The main feature of this te
 
 Furthermore, there are some additional packages designed for specific courses, e.g., MAT240, CSC240.
 
-In addition, the custimized cover page and background color further increase the beauty of the document.
+In addition, the custimized cover page and background color (night mode with background image) further increase the beauty of the document.
 
 Overall, this eye-protecting template effectively helps the users to record notes especially for STEM related subjects.
 
@@ -30,10 +30,7 @@ Structure:
 │   ├── tcbthm.sty
 │   ├── csc240.sty
 │   ├── mat240.sty
-│   ├── uoft.png
-│   ├── stars.png
-│   ├── sao.png
-│   └── qunwang.png
+│   ├── [...].png
 ├── alittlebear.cls
 ├── Examples.tex
 └── UserGuide.tex
