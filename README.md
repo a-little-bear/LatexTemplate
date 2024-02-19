@@ -21,3 +21,18 @@ Thanks:
 - https://github.com/simurgh9/hw
 
 for some of the commands...
+
+Structure:
+├── README.md
+├── clsfiles/
+│   ├── shortcuts.sty
+│   ├── tcbthm.sty
+│   ├── csc240.sty
+│   ├── mat240.sty
+│   ├── uoft.png
+│   ├── stars.png
+│   ├── sao.png
+│   └── qunwang.png
+├── alittlebear.cls
+├── Examples.tex
+└── UserGuide.tex
