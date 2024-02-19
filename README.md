@@ -35,3 +35,8 @@ Structure:
 ├── Examples.tex
 └── UserGuide.tex
 ```
+
+TODO:
+- Use *xparse* or *xargs* for image / figure environments (abbreviations) with multiple optional keys
+- Modify multipage / minipage environments
+- Fix some footnote issues within tcolorbox / tcolorbox title
