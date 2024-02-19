@@ -15,6 +15,9 @@ An example of tex file based on this document class can be found here: https://g
 Note: the additional pictures and packages are stored within the folder *clsfiles*, so when accessing, this address must be stated. 
 
 Thanks:
-https://github.com/ElegantLaTeX/ElegantBook
-https://github.com/simurgh9/hw
+
+- https://github.com/ElegantLaTeX/ElegantBook
+
+- https://github.com/simurgh9/hw
+
 for some of the commands...
