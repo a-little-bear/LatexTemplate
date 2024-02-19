@@ -1,11 +1,14 @@
-\documentclass[12pt]{alittlebear}
+\documentclass[12pt, brown, sepia]{alittlebear}
 
 \def\name{Joseph Siu}
+\def\email{joseph.siu@mail.utoronto.ca}
 \def\course{MAT114: Latex IV}
-\def\headername{UserGuide }
-\def\headernum{XX}
+\def\headername{UserGuide XX}
+\def\info{This is the user guide document to the customized latex document class \tit{alittlebear.cls}.}
 
 \begin{document} 
+
+\coverpage[stars]
 
 \tableofcontents
 
@@ -15,23 +18,24 @@
 The DocumentClass \textit{alittlebear.cls} aims to provide a simple and easy template for writing math notes on latex. The link to alittlebear.cls, Example.tex, and Template.tex can be found at \url{https://github.com/a-little-bear/Latex-Template}.\\
 
 \noindent
-Here is the template of a new tex file: 
-\begin{note}
-    \begin{verbatim}
-\documentclass[12pt]{alittlebear}
+Here is the template of a new tex file (note that all 5 \verb=\def= and the cover command are optional): 
+\begin{lstlisting}[language=TeX]
+    \documentclass[12pt, brown, sepia, 0.5in]{alittlebear}
 
-\def\name{}
-\def\course{}
-\def\headername{}
-\def\headernum{}
-
-\begin{document} 
-
-
-
-\end{document}    
-    \end{verbatim}
-\end{note}
+    % \def\name{}
+    % \def\email{}
+    % \def\course{}
+    % \def\headername{}
+    % \def\info{}
+    
+    \begin{document} 
+    
+    % \cover[stars]
+    
+    
+    
+    \end{document}    
+\end{lstlisting}
 
 \newpage
 
@@ -39,8 +43,17 @@ Here is the template of a new tex file:
 
 \subsection{Document Preamble}\hfill
 
-\verb=\documentclass[#pt]{alittlebear}=
-\explain{\#: font size in $\{10, 11, 12\}$, in pt}
+\verb=\documentclass[#pt,#in,{geye,hazy,sepia},{green,cyan,blue,sakura,black,brown}]{alittlebear}=
+
+\indenv[2]{
+    \#pt: font size, default 12pt, 9pt to 13pt
+
+    \#in: margin, 1in or 0.5in
+
+    \{geye, hazy, sepia\}: green, white, or yellow background
+
+    \{green...\}: main color
+}
 
 \verb=\def\name{#}=
 \explain{\#: author name}
@@ -64,14 +77,11 @@ Here is the template of a new tex file:
 \verb=\indentpar{0pt}=
 \explain{Indentation of the first line of a paragraph, Default: 0pt}
 
-\verb=\def\maincolor{brown}=
-\explain{Main color, Default: brown}
-
-\verb=\marginsize{0.5in}=
-\explain{margin of the pages, may change to 0.5in 1in etc}
-
 \verb=\thmstyle{definition}=
 \explain{Theorem style from asmthm, Default: definition}
+
+\verb=\defaultlanguage{python}=
+\explain{Default Language for listings}
 
 
 
@@ -139,6 +149,14 @@ Here is the template of a new tex file:
 \verb=\tbf{\textbf}=
 \explain{shortcut for text fonts command}\\
 
+\begin{verbatim}
+\newenvironment{proofcases}{
+    \newcommand{\case}
+    \newcommand{\subcase}
+}
+\end{verbatim}
+\ind{New environment for proof cases}
+
 
 
 
@@ -157,14 +175,18 @@ Here is the template of a new tex file:
 \verb=\retcbcnt=
 \explain{Reset the counter for tcolorbox theorem environment}\\
 
-\verb=\newn,\newm=
-\explain{New notitle tcolorbox}
+\verb=\newn,\newm, \newtbox=
+\explain{New no/title tcolorbox}
 \begin{verbatim}
                 Example: \newn{
                     This is a new notitle "note" tcolorbox 
                 }
                 \newm{
                     This is a new notitle "mathnote" tcolorbox 
+                }
+                \newtbox[optional: #1]{
+                    This is a new titled "tbox" tcolorbox 
+                
                 }
 \end{verbatim}
 
@@ -320,17 +342,6 @@ Here is the template of a new tex file:
 \end{verbatim}
 \ind[20]{Modified QED symbol}
 
-\begin{verbatim}
-  \lstnewenvironment{CPP}{\lstset{language=C++}}{}
-\end{verbatim}
-\ind[20]{New environment for C++ et al code listing}
-
-\begin{verbatim}
-                Example (CPP = C++, Cl = C):
-                    \begin{CPP}
-                        hi
-                    \end{CPP}
-\end{verbatim}
 
 
 \newpage
