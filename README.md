@@ -1,6 +1,6 @@
 # Introduction
 
-This is a latex template for homework / note taking. The main feature of this template is the tcolorboxes with different colors, and ending symbols. Moreover, the abbreviations of all these tcolor theorem boxes environments help the user effectively record notes during lectures.
+This is a latex template for homework / note taking. The main feature of this template is the tcolorboxes with different colors, and ending symbols. Moreover, the abbreviations of all these tcolor theorem boxes environments help the user effectively records notes during lectures.
 
 Furthermore, there are some additional packages designed for specific courses, e.g., MAT240, CSC240.
 
@@ -13,3 +13,11 @@ The Guide to this template can be found here: https://github.com/a-little-bear/L
 An example of tex file based on this document class can be found here: https://github.com/a-little-bear/Latex-Template/blob/main/Example.tex
 
 Note: the additional pictures and packages are stored within the folder *clsfiles*, so when accessing, this address must be stated. 
+
+Thanks:
+
+- https://github.com/ElegantLaTeX/ElegantBook
+
+- https://github.com/simurgh9/hw
+
+for some of the commands...
