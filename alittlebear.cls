@@ -1,3 +1,17 @@
+%Template for alittlebear.cls
+%\documentclass[11pt, brown, sepia, 1in]{alittlebear}
+%\def\course{}
+%\def\headername{}
+%\def\name{}
+%\def\email{}
+%\def\info{}
+%\def\logo{}
+%\begin{document}
+%\coverpage[clsfiles/stars]
+%\end{document}
+
+
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{alittlebear}[2024/02/18 alittlebear]
 
