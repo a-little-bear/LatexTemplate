@@ -123,29 +123,14 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 
 \verb=\ds{\displaystyle}=\\
 
-\verb=\bb{\mathbb}=
-
-\verb=\cal{\mathcal}=
-
-\verb=\scr{\mathscr}=
-
-\verb=\frak{\mathfrak}=
-
-\verb=\bf{\mathbf}=
+\verb=\bb{\mathbb},\cal{\mathcal},\scr{\mathscr},\frak{\mathfrak},\bf{\mathbf}=
 \explain{shortcut for math fonts command}\\
 
-\verb=\tit{\textit}=
-
-\verb=\trm{\textrm}=
-
-\verb=\tsf{\textsf}=
-
-\verb=\ttt{\texttt}=
-
-\verb=\tsc{\textsc}=
-
-\verb=\tbf{\textbf}=
+\verb=\tit{\textit},\trm{\textrm},\tsf{\textsf},\ttt{\texttt},\tsc{\textsc},\tbf{\textbf}=
 \explain{shortcut for text fonts command}\\
+
+\verb=\extractfootnote{#1}=
+\explain{To show food note created within tcolorboxes (title or content), let \#1 be the name of the environment, e.g. theorem definition}
 
 \begin{verbatim}
 \newenvironment{proofcases}{

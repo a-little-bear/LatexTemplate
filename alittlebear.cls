@@ -70,6 +70,12 @@
 \RequirePackage{setspace}
 \RequirePackage{multicol}
 
+\RequirePackage{footnote}
+\newcommand{\extractfootnote}[1]{
+    \BeforeBeginEnvironment{#1}{\savenotes}
+    \AfterEndEnvironment{#1}{\spewnotes}
+}
+
 \RequirePackage{silence}
 %Disable all warnings issued by latex starting with "You have..."
 \WarningFilter{latex}{You have requested package}
