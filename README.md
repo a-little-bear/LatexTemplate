@@ -13,3 +13,8 @@ The Guide to this template can be found here: https://github.com/a-little-bear/L
 An example of tex file based on this document class can be found here: https://github.com/a-little-bear/Latex-Template/blob/main/Example.tex
 
 Note: the additional pictures and packages are stored within the folder *clsfiles*, so when accessing, this address must be stated. 
+
+Thanks:
+https://github.com/ElegantLaTeX/ElegantBook
+https://github.com/simurgh9/hw
+for some of the commands...
