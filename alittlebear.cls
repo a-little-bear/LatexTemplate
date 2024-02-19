@@ -64,7 +64,7 @@
 \RequirePackage{mathtools} % multlined environment inside align
 \RequirePackage{microtype} % text spacing margin etc
 \RequirePackage{mathrsfs} % for mathscr
-\RequirePackage{listings}
+\RequirePackage{listings, accsupp}
 \RequirePackage{setspace}
 \RequirePackage{multicol}
 
@@ -165,7 +165,7 @@
     linktoc=all,     %set to all if you want both sections and subsections linked
     citecolor=ecolor,
     filecolor=ecolor,
-    linkcolor=ecolor,
+    linkcolor=ecolor, %epubblue,
     urlcolor=ecolor
 }
 \RequirePackage{hologo}
@@ -269,6 +269,11 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\newcommand{\noncopynumber}[1]{% keep line numbers from being copied in code listings
+    \BeginAccSupp{method=escape,ActualText={}}
+    #1
+    \EndAccSupp{}
+}
 \lstset{frame=tb,
     language=\defaultlanguage,
     aboveskip=3mm,
@@ -276,14 +281,14 @@
     showstringspaces=false,
     columns=flexible,
     basicstyle={\small\ttfamily},
-    numbers=none,
-    numberstyle=\tiny\color{gray},
+    numberstyle=\scriptsize\noncopynumber,
     keywordstyle=\color{blue},
     commentstyle=\color{dkgreen},
     stringstyle=\color{mauve},
     breaklines=true,
     breakatwhitespace=true,
-    tabsize=3
+    tabsize=3,
+    numbers=left,
 }
 
 \lstnewenvironment{code}{\lstset{language=\defaultlanguage}}{}
