@@ -1,0 +1,65 @@
+\ProvidesPackage{csc240}
+\NeedsTeXFormat{LaTeX2e}
+
+
+%%% Logic
+\newcommand{\nnot}{\mathrm{NOT}}
+\newcommand{\aand}{\,\,\mathrm{AND}\,\,}
+\newcommand{\oor}{\,\,\mathrm{OR}\,\,}
+\newcommand{\iimplies}{\,\,\mathrm{IMPLIES}\,\,}
+\newcommand{\xor}{\,\,\mathrm{XOR}\,\,}
+\newcommand{\iif}{\,\,\mathrm{IFF}\,\,}
+
+% Environment for writing formal proofs======================================
+%
+% \nl ends line and makes next line a Numbered Line
+% \ul ends line and makes next line an Unnumbered Line 
+% \n increases the level of indentation ("next")
+% \p decreases the level of indentation ("previous")
+%\firstline  to number the first line of a proof
+%
+% Example:
+% 
+% 1     let $x \in \nats$ be arbitrary
+% 2         let $y = x+1 \in \nats$
+% 3         $y > x$; property of $\nats$, 2
+% 4      $\exists y \in \nats. (y > x)$; construction 2, 3
+% 5  $\forall x \in \nats. \exists y \in \nats. (y > x)$; generalization 1,4
+%
+
+% this can be typed as follows:
+%
+% \begin{formal}
+% \firstline          <--- to number the first line of a proof
+% \n \label{gen-start} let $x \in \nats$ be arbitrary \nl  
+% \n let $y = x+1 \in \nats$ \label{defy} \nl
+% $y > x$; property of $\nats$, \lref{defy} \label{gt} \nl
+% \p $\exists y \in \nats. (y > x)$; \label{inside} construction \lref{defy},\lref{gt} \nl
+% \p $\forall x \in \nats. \exists y \in \nats. (y > x)$; generalization \lref{gen-start}, \lref{inside}
+% \end{formal}
+% 
+% You can use \labels anywhere in the code and \lref to refer to the line
+% number.  (This is done using smartref package.)
+%
+%to reset the line numbering counter:
+%\setcounter{linenum}{0} 
+
+\usepackage{smartref} % for referencing the line numbers
+\newcounter{linenum}
+\addtoreflist{linenum}
+\def\codeTabSpace{\hspace*{4mm}}
+\newenvironment{formal}%
+{\begin{tabbing}%
+        \codeTabSpace \= \hspace*{20mm} \= \hspace*{20mm} \= \hspace*{20mm} \= \kill%
+        }%
+        {\end{tabbing}%
+}
+\newcounter{ind}
+\newcommand{\nex}{\addtocounter{ind}{5}\hspace*{5mm}}
+\newcommand{\pre}{\addtocounter{ind}{-5}\hspace*{-5mm}}
+\newcommand{\nl}{\\\stepcounter{linenum}{\scriptsize \arabic{linenum}}\>\hspace*{\value{ind}mm}}
+\newcommand{\ul}{\\\>\hspace*{\value{ind}mm}}
+\newcommand{\bl}{\\[-1.5mm]\>\hspace*{\value{ind}mm}}
+\newcommand{\firstline}{\stepcounter{linenum}{\scriptsize \arabic{linenum}}\>}
+\newcommand{\lref}[1]{\linenumref{#1}} % use this to refer to a line number
+% End of environment for writing formal proofs=====================================

@@ -68,11 +68,10 @@
 \RequirePackage{setspace}
 \RequirePackage{multicol}
 
-
-
-
-
-
+\RequirePackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+\WarningFilter{latex}{You have requested package}
+\WarningFilter{fancyhdr}{\footskip is too small}
 
 
 \newcommand\mailto[1]{\href{mailto:#1}{\nolinkurl{#1}}}
@@ -97,7 +96,7 @@
     \headerfootercolor\hrulefill
     \raisebox{-2.1pt}{\quad\decofourleft\leafSE\quad\footnotesize Page \thepage\ of \pageref{LastPage}\quad\leafSW\decofourright\quad}\hrulefill}
 
-\newcommand*{\coverpage}[1][stars]{
+\newcommand*{\coverpage}[1][clsfiles/stars]{
     \newgeometry{margin = 0in}
     \vfill
     \begin{titlepage}
@@ -114,20 +113,24 @@
         \rule{\linewidth}{0.3mm} \\[1cm]
 
         \indenv[3]{
-            \begin{minipage}{0.5\textwidth}
+            \begin{minipage}{0.4\textwidth}
                 \ifcsdef{name}{\large\tbf{Author:} \name \\[0.5cm]}{}
                 \ifcsdef{email}{\large\tbf{Email:} \mailto{\email} \\[0.5cm]}{}
                 \ifcsdef{date}{\large\tbf{Date:} \today \\[0.5cm]}{}
                 \ifcsdef{info}{\large\tbf{Info:} \info \\[0.5cm]}{}
             \end{minipage}
+            \begin{minipage}{0.1\textwidth}
+                \hfill
+            \end{minipage}
             \begin{minipage}{0.5\textwidth}
-                \includegraphics[width=\textwidth/2]{uoft}
+                \ifcsdef{logo}{\includegraphics[width=\textwidth/2]{\logo}}{\includegraphics[width=\textwidth/2]{clsfiles/uoft}}
             \end{minipage}
         }
     \end{titlepage}
     \par
     \restoregeometry
     \np
+    \pagestyle{style}
 }
 % later page style
 \fancypagestyle{style}{
@@ -136,7 +139,7 @@
     \ifcsdef{name}{\rhead{\headerfootercolor\name}}{}
     
     %\chead{\today}
-    \setlength{\headheight}{30pt}}
+    \setlength{\headheight}{35pt}}
 % declare first page style
 % \AtBeginDocument{\thispagestyle{firstpagestyle}}
 
@@ -158,6 +161,8 @@
 \hypersetup{
     pdfborder={0 0 0},
     colorlinks,
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
     citecolor=ecolor,
     filecolor=ecolor,
     linkcolor=ecolor,
@@ -231,6 +236,7 @@
 \definecolor{brown}{RGB}{109,62,18}
 % tikz
 \RequirePackage{tikz}
+\usetikzlibrary{angles,quotes}
 \usetikzlibrary{shadows}
 \newcommand*{\eitemi}{
     \tikz\draw[baseline, ball color=ecolor, draw=none] circle (2pt);}
@@ -280,6 +286,8 @@
     tabsize=3
 }
 
+\lstnewenvironment{code}{\lstset{language=\defaultlanguage}}{}
+\lstnewenvironment{latexcode}{\lstset{language=Tex}}{}
 
 
 
@@ -298,15 +306,13 @@
 
 
 
-
-
-\RequirePackage{shortcuts}
+\RequirePackage{clsfiles/shortcuts}
 %color boxes
 \RequirePackage[breakable, skins, theorems]{tcolorbox}
 %use \tcblower for break
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
 \theoremstyle{\thmstyle}
-\RequirePackage{tcbthm}
+\RequirePackage{clsfiles/tcbthm}
 
 
 

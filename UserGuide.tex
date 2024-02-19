@@ -1,14 +1,15 @@
 \documentclass[12pt, brown, sepia]{alittlebear}
 
-\def\name{Joseph Siu}
-\def\email{joseph.siu@mail.utoronto.ca}
 \def\course{MAT114: Latex IV}
 \def\headername{UserGuide XX}
+\def\name{\href{https://alittlebear.us.to}{Joseph Siu}}
+\def\email{joseph.siu@mail.utoronto.ca}
 \def\info{This is the user guide document to the customized latex document class \tit{alittlebear.cls}.}
+% \def\logo{clsfiles/uoft} % default
 
 \begin{document} 
 
-\coverpage[stars]
+\coverpage[clsfiles/stars]
 
 \tableofcontents
 
@@ -18,24 +19,27 @@
 The DocumentClass \textit{alittlebear.cls} aims to provide a simple and easy template for writing math notes on latex. The link to alittlebear.cls, Example.tex, and Template.tex can be found at \url{https://github.com/a-little-bear/Latex-Template}.\\
 
 \noindent
-Here is the template of a new tex file (note that all 5 \verb=\def= and the cover command are optional): 
+Here is the template of a new tex file (note that all 6 \verb=\def= and the cover command are optional): 
 \begin{lstlisting}[language=TeX]
     \documentclass[12pt, brown, sepia, 0.5in]{alittlebear}
 
-    % \def\name{}
-    % \def\email{}
     % \def\course{}
     % \def\headername{}
+    % \def\name{}
+    % \def\email{}
     % \def\info{}
+    % \def\logo{}
     
     \begin{document} 
     
-    % \cover[stars]
+    % \cover[clsfiles/stars]
     
     
     
     \end{document}    
 \end{lstlisting}
+
+
 
 \newpage
 
@@ -55,17 +59,23 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
     \{green...\}: main color
 }
 
-\verb=\def\name{#}=
-\explain{\#: author name}
-
 \verb=\def\course{#}=
 \explain{\#: course name}
 
 \verb=\def\headername{#}=
 \explain{\#: header name}
 
-\verb=\def\headernum{#}=
-\explain{\#: header number}
+\verb=\def\name{#}=
+\explain{\#: author name}
+
+\verb=\def\email{#}=
+\explain{\#: author email}
+
+\verb=\def\info{#}=
+\explain{\#: abstract}
+
+\verb=\def\logo{#}=
+\explain{\#: logo file path, the right image displayed on the cover page}
 
 
 
@@ -103,23 +113,6 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
                     This is an indented environment with 10mm indentation
                 }
 \end{verbatim}
-
-\verb=\ind[1][5]{\hspace*{#1mm}}=
-\explain{\#1: indentation, Default: 5mm}
-\begin{verbatim}
-                Example: \ind{
-                    This is an indented paragraph
-                }
-                \ind[10]{
-                    This is an indented paragraph with 10mm indentation
-                }
-\end{verbatim}
-
-\verb=\unind[1][5]{\hspace*{-#1mm}}=
-\explain{\#1: unindentation, Default: -5mm}
-
-\verb=\explain[2][20]{\\\ind[#1]{#2}}=
-\explain{\#1: indentation, Default: 20mm, \#2: explanation}\\
 
 \verb=\np{\newpage}=
 
@@ -171,9 +164,6 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
 
 \verb=\tcbcnt=
 \explain{Set the counter for tcolorbox theorem environment}
-
-\verb=\retcbcnt=
-\explain{Reset the counter for tcolorbox theorem environment}\\
 
 \verb=\newn,\newm, \newtbox=
 \explain{New no/title tcolorbox}
@@ -239,7 +229,7 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
 \explain{Abbreviation of $\backslash$text\{\}}
 
 \begin{verbatim}
-  \Al[3]{#1 &=#2 &\text{#3}&&\\}
+\Al[3]{#1 &=#2 &\text{#3}&&\\}
 \end{verbatim}
 \ind[20]{(left) = (right) + (explanation)}
 
@@ -252,32 +242,19 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
 \verb=\ie{\text{ i.e. }}=
 \explain{Abbreviation of $\backslash$text\{ i.e. \}}
 
+\verb=\eg{\text{ e.g. }}=
+\explain{Abbreviation of $\backslash$text\{ e.g. \}}
+
 \verb=\alt[1]{\intertext{#1}}=
 \explain{Insert line between align math equations, $\backslash\backslash$ included}
-
-\begin{verbatim}
-  \bb[1]{\mathbb{#1}}
-  \cal[1]{\mathcal{#1}}
-  \sc[1]{\textsc{#1}}
-\end{verbatim}
-\ind[20]{More shortcuts for mathbb, mathcal, textsc}
 
 \verb=\D{\mathop{}\!\mathrm{d}}=
 \explain{d symbol for differentiation, example: $\backslash$D x}
 
 \begin{verbatim}
-  \DD[2]{\frac{\D #1 }{\D #2}}
+\DD[2]{\frac{\D #1 }{\D #2}}
 \end{verbatim}
 \ind[20]{Leibniz's notation of differentiation, example: $\backslash$DD\{x\}\{y\}}
-
-\verb=\vspan{span}=
-\explain{span in linear algebra, Math Operator}
-
-\verb=\rank{rank}=
-\explain{rank in linear algebra, Math Operator}
-
-\verb=\im{im}=
-\explain{image in linear algebra, Math Operator}
 
 \verb=\sgn{sgn}=
 \explain{defined math operator sgn as the sign function}
@@ -343,6 +320,28 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
 \ind[20]{Modified QED symbol}
 
 
+\section{Additional Packages}
+
+\subsection{MAT240}
+
+
+\verb=\vspan{span}=
+\explain{span in linear algebra, Math Operator}
+
+\verb=\rank{rank}=
+\explain{rank in linear algebra, Math Operator}
+
+\verb=\im{im}=
+\explain{image in linear algebra, Math Operator}
+
+
+\subsection{CSC240}
+
+\verb=AND,OR,IMPLIES,IFF,XOR=
+
+\verb=\aand,\oor,\iimplies,\iif,\xor=
+\explain{The weird symbols for CSC240}
+
 
 \newpage
 \section{Known Bugs / Improvements}
@@ -355,6 +354,7 @@ Here is the template of a new tex file (note that all 5 \verb=\def= and the cove
     \item The color box sometimes touches the footer.
     \item Make sure use \verb=\np= or \verb=\newpage= for new exercise/unit/chapter so that the page splitting functions properly.
 \end{enumerate}
+
 
 
 
