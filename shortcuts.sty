@@ -1,0 +1,104 @@
+\ProvidesPackage{shortcuts}
+\NeedsTeXFormat{LaTeX2e}
+
+% Document
+\newcommand{\np}{\newpage}
+%indent and format, Abounded commands, use indenv instead
+\newcommand{\ind}[1][5]{\hspace*{#1mm}}
+\newcommand{\explain}[2][20]{\\\ind[#1] {#2}}
+\newcommand{\unind}[1][5]{\hspace*{-#1mm}}
+
+% Functions
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+
+\newcommand\D{\mathop{}\!\mathrm{d}}
+\newcommand{\DD}[2]{ \frac{\D #1 }{\D #2 } }
+\newcommand{\Pset}[1]{\mathcal{P}(#1)} %power set
+\newcommand{\Relate}[2]{#1\mathcal{R}#2} %relation
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\GF}[1][2]{\bb{F}_{#1}}
+\newcommand{\modulo}[1][n]{\Z/#1\Z}
+
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\near}[1]{\left\lfloor#1\right\rceil}
+\newcommand{\arr}[1]{\left\langle#1\right\rangle}
+\newcommand{\bra}[1]{\left(#1\right)} %pair / ()
+\newcommand{\sqrbra}[1]{\left[#1\right]} %[]
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\curbra}[1]{\left\{#1\right\}} %set {}
+\newcommand{\func}[3]{#1: #2 \rightarrow #3}
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+
+% Text Commands
+\DeclareRobustCommand{\tit}[1]{\textit{#1}}
+\DeclareRobustCommand{\trm}[1]{\textrm{#1}}
+\DeclareRobustCommand{\tsf}[1]{\textsf{#1}}
+\DeclareRobustCommand{\ttt}[1]{\texttt{#1}}
+\DeclareRobustCommand{\tsc}[1]{\textsc{#1}}
+\DeclareRobustCommand{\tbf}[1]{\textbf{#1}}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\ie}{\text{ i.e. }}
+\newcommand{\alt}[1]{\intertext{#1}}
+\newcommand{\Al}[3]{#1 &=#2 &\text{#3}&&\\}
+\newcommand{\T}[1]{\text{#1}}
+
+% Math Operators / Commands
+\newcommand{\ds}{\displaystyle}
+\newcommand{\cd}{\cdot}
+\DeclareRobustCommand{\bb}[1]{\mathbb{#1}}
+\DeclareRobustCommand{\cal}[1]{\mathcal{#1}}
+\DeclareRobustCommand{\scr}[1]{\mathscr{#1}}
+\DeclareRobustCommand{\frak}[1]{\mathfrak{#1}}
+\DeclareRobustCommand{\bf}[1]{\mathbf{#1}}
+\newcommand{\nil}{\varnothing}
+\renewcommand{\O}{\cal{O}} % Reals
+\newcommand{\C}{\bb{C}} % Rationals
+\newcommand{\R}{\bb{R}} % Reals
+\newcommand{\Q}{\bb{Q}} % Rationals
+\newcommand{\Z}{\bb{Z}} % Integers
+\newcommand{\N}{\bb{N}} % Naturals
+\renewcommand{\P}{\bb{P}} % Primes
+\newcommand{\relate}{\mathcal{R}}
+\newcommand{\F}{\bb{F}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\?}{\stackrel{?}{=}}
+\newcommand{\is}{\equiv}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\de}{\delta}
+\newcommand{\sig}{\sigma}
+\newcommand{\Sig}{\Sigma}
+\newcommand{\p}{\partial}
+\newcommand{\injective}{\hookrightarrow}
+\newcommand{\surjective}{\twoheadrightarrow}
+\newcommand{\bijective}{\hookrightarrow\mathrel{\mspace{-15mu}}\rightarrow}
+
+
+
+
+% Defines the `proofcases` environment for the Cases in proofs.
+\newcounter{cases}
+\newcounter{subcases}[cases]
+\newenvironment{proofcases}
+{
+    \setcounter{cases}{0}
+    \setcounter{subcases}{0}
+    \newcommand{\case}
+    {
+        \par\indent\stepcounter{cases}\textbf{Case \thecases.}
+    }
+    \newcommand{\subcase}
+    {
+        \par\indent\stepcounter{subcases}\textit{Subcase (\thesubcases):}
+    }
+}
+{
+    \par
+}
