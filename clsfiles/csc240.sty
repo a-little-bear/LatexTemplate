@@ -9,6 +9,9 @@
 \newcommand{\iimplies}{\,\,\mathrm{IMPLIES}\,\,}
 \newcommand{\xor}{\,\,\mathrm{XOR}\,\,}
 \newcommand{\iif}{\,\,\mathrm{IFF}\,\,}
+%%% Sets
+\newcommand{\nats}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
 
 % Environment for writing formal proofs======================================
 %
@@ -63,3 +66,14 @@
 \newcommand{\firstline}{\stepcounter{linenum}{\scriptsize \arabic{linenum}}\>}
 \newcommand{\lref}[1]{\linenumref{#1}} % use this to refer to a line number
 % End of environment for writing formal proofs=====================================
+
+
+
+%%% Function restriction
+%%% To restrict f to a subset I, write \restr{f}{I}.
+\newcommand\restr[2]{{
+\left.\kern-\nulldelimiterspace
+#1
+\vphantom{\big|}
+\right|_{#2}
+}}

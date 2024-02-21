@@ -219,7 +219,7 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 \explain{Abbreviation of $\backslash$text\{\}}
 
 \begin{verbatim}
-\Al[3]{#1 &=#2 &\text{#3}&&\\}
+\Aleq[3]{#1 &=#2 &\text{#3}&&\\}
 \end{verbatim}
 \ind[20]{(left) = (right) + (explanation)}
 
@@ -252,6 +252,30 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 
 
 \newpage\subsection{Symbol Abbreviations}\hfill
+
+
+\subsubsection{Greek Letters}
+
+All letters have been shortened into the first 2 letters (or 1 if the total length is 1). For example,
+\begin{verbatim}
+    \al -> \alpha
+    \Al -> \Alpha
+    \be -> \beta
+    \ph -> \phi
+    \om -> \omega
+    \Om -> \Omega
+\end{verbatim}
+
+The variable versions are also included, for example,
+\begin{verbatim}
+    vep -> \varepsilon
+    vph -> \varphi
+    vOm -> \varOmega
+\end{verbatim}
+
+
+
+\subsubsection{Other symbols and Operations}
 \begin{verbatim}
   \C -> \mathbb{C} == complex
   \R -> \mathbb{R} == reals
@@ -260,20 +284,13 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
   \N -> \mathbb{N} == naturals 
   \F -> \mathbb{F} == field
 
-  \al -> \alpha
-  \be -> \beta
-  \ga -> \gamma
-  \Ga -> \Gamma
-  \ep -> \varepsilon
-  \de -> \delta
-  \sig -> \sigma
-  \Sig -> \Sigma
   \p -> \partial
 
   \? -> \stackrel{?}{=} == question mark on equal sign
   \ra -> \rightarrow == rightarrow (single line)
   \Ra -> \Rightarrow == Rightarrow (double lines)
   \is -> \equiv == equivalent (triple lines)
+  \sse -> \subseteq
   \injective \surjective \bijective
 
   \arr = angle brackets

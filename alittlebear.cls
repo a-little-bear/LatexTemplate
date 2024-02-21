@@ -134,10 +134,10 @@
 
 
         % Title
-        \rule{\linewidth}{0.3mm} \\[0.4cm]
+        \color{ecolor}\rule{\linewidth}{0.3mm} \\[0.4cm]
         \ifcsdef{course}{\centering \huge \bfseries \color{ecolor} \course \\[0.5cm] }{}
         \ifcsdef{headername}{\centering \huge \bfseries \color{ecolor} \headername \\[0.5cm] }{}
-        \rule{\linewidth}{0.3mm} \\[1cm]
+        \color{ecolor}\rule{\linewidth}{0.3mm} \\[1cm]
 
         \indenv[3]{
             \begin{minipage}{0.4\textwidth}

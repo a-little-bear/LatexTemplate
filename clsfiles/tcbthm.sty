@@ -7,7 +7,7 @@
 \newcommand{\envbreak}{%
     \begin{tikzpicture}
         \path[use as bounding box] (0,0) -- (\linewidth,0);
-        \draw[color=\maincolor!75!black,dashed,dash phase=2pt]
+        \draw[color=main!75!black,dashed,dash phase=2pt]
         (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
         (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
     \end{tikzpicture}%
@@ -108,13 +108,13 @@
     after upper={\hfill\textcolor{ecolor}{$\lozenge$}},
     opacityback=\thmopacity, opacityframe=\thmopacity,
     ,boxed title style={
-        opacityback=\thmopacity, 
-        opacityframe=\thmopacity, 
-        colupper=textcol,
-        collower=textcol,
-        coltitle=textcol,
-        coltext=textcol,
-    },
+            opacityback=\thmopacity,
+            opacityframe=\thmopacity,
+            colupper=textcol,
+            collower=textcol,
+            coltitle=textcol,
+            coltext=textcol,
+        },
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -130,13 +130,13 @@
     opacityback=\thmopacity, opacityframe=\thmopacity,
     opacitybacktitle=\thmopacity,
     ,boxed title style={
-        opacityback=\thmopacity,
-        opacityframe=\thmopacity,
-        colupper=textcol,
-        collower=textcol,
-        coltitle=textcol,
-        coltext=textcol,
-    },
+            opacityback=\thmopacity,
+            opacityframe=\thmopacity,
+            colupper=textcol,
+            collower=textcol,
+            coltitle=textcol,
+            coltext=textcol,
+        },
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -152,13 +152,13 @@
     opacitybacktitle=\thmopacity,
     after upper={\hfill\textcolor{ecolor}{$\heartsuit$}}
     ,boxed title style={
-        opacityback=\thmopacity,
-        opacityframe=\thmopacity,
-        colupper=textcol,
-        collower=textcol,
-        coltitle=textcol,
-        coltext=textcol,
-    },
+            opacityback=\thmopacity,
+            opacityframe=\thmopacity,
+            colupper=textcol,
+            collower=textcol,
+            coltitle=textcol,
+            coltext=textcol,
+        },
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -176,13 +176,13 @@
     opacityback=\thmopacity, opacityframe=\thmopacity,
     opacitybacktitle=\thmopacity,
     ,boxed title style={
-        opacityback=\thmopacity,
-        opacityframe=\thmopacity,
-        colupper=textcol,
-        collower=textcol,
-        coltitle=textcol,
-        coltext=textcol,
-    },
+            opacityback=\thmopacity,
+            opacityframe=\thmopacity,
+            colupper=textcol,
+            collower=textcol,
+            coltitle=textcol,
+            coltext=textcol,
+        },
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -201,13 +201,13 @@
     after upper={\hfill\textcolor{ecolor}{$\spadesuit$}},
     opacitybacktitle=\thmopacity,
     ,boxed title style={
-        opacityback=\thmopacity,
-        opacityframe=\thmopacity,
-        colupper=textcol,
-        collower=textcol,
-        coltitle=textcol,
-        coltext=textcol,
-    },
+            opacityback=\thmopacity,
+            opacityframe=\thmopacity,
+            colupper=textcol,
+            collower=textcol,
+            coltitle=textcol,
+            coltext=textcol,
+        },
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -216,8 +216,7 @@
 \newtcbtheorem{exercise}{Exercise}{
     colupper=textcol,
     collower=textcol,
-    coltitle=textcol,
-    opacityback=\thmopacity, opacityframe=\thmopacity, 
+    opacityback=\thmopacity, opacityframe=\thmopacity,
     enforce breakable, enhanced,
     before skip=2mm, after skip=2mm,
     colback=black!5, colframe=black!50, boxrule=0.2mm,
@@ -244,7 +243,6 @@
 \newtcbtheorem{unit}{Unit}{
     colupper=textcol,
     collower=textcol,
-    coltitle=textcol,
     opacityback=\thmopacity, opacityframe=\thmopacity,
     enforce breakable, enhanced,
     before skip=2mm, after skip=2mm,
@@ -272,7 +270,6 @@
 \newtcbtheorem{chapter}{Chapter}{
     colupper=textcol,
     collower=textcol,
-    coltitle=textcol,
     opacityback=\thmopacity, opacityframe=\thmopacity,
     enforce breakable, enhanced,
     before skip=2mm, after skip=2mm,
@@ -316,5 +313,5 @@
         \parskip=\skippar\parindent=\indentpar#1\end{mathnote}}
 \newcommand{\newh}[1]{\begin{hint}#1\end{hint}}
 \newcommand{\newp}[1]{\begin{proof}#1
-\parskip=\skippar\parindent=\indentpar\end{proof}}
+        \parskip=\skippar\parindent=\indentpar\end{proof}}
 \newcommand{\newtbox}[2][]{\begin{tbox}{#1}#2\end{tbox}}
