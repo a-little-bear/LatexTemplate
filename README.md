@@ -1,3 +1,6 @@
+
+(Download)[https://github.com/a-little-bear/Latex-Template/releases/tag/alpha], (User Guide)[https://github.com/a-little-bear/Latex-Template/blob/main/UserGuide.pdf], (Example)[https://github.com/a-little-bear/Latex-Template/blob/main/Example.pdf]
+
 # Introduction
 
 This is a latex template for homework / note taking. The main feature of this template is the tcolorboxes with different colors, and ending symbols. Moreover, the abbreviations of all these tcolor theorem boxes environments help the user effectively records notes during lectures.
