@@ -23,7 +23,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{alittlebear}[2024/02/18 alittlebear]
+\ProvidesClass{alittlebear}[2024/02/22 alittlebear]
 
 %settings
 \def\filename{\headername} %name of file
