@@ -1,4 +1,4 @@
-\documentclass[12pt, sakura, night, 0.5in]{alittlebear}
+\documentclass[12pt, orange, night, 0.5in]{alittlebear}
 
 \usepackage{clsfiles/mat240}
 \usepackage{clsfiles/csc240}
@@ -151,11 +151,12 @@ The \verb=\alt{}= command within align math environment is also useful, example 
 
 \subsection{Available Boxes}
 
-All available boxes are also shown below
-
 \newch{2}{
     \newd[Insert a random definition here]{1}{
         1   
+    }
+    \newpp{1}{
+        xd
     }
     \newl{1}{
         1   
@@ -199,6 +200,11 @@ All available boxes are also shown below
     }
 }
 
+\neweg{
+    Tomato is not a fruit.
+}
+
+
 \np
 \section{Random Environments}
 
@@ -208,15 +214,32 @@ The usage of the package \tit{listings} is as follows:
 
 The defualt langauge for environment \tit{code} is Python, can be changed in the cls file.
 
-\begin{code}
+\begin{lstlisting}[language=Python]
+
     # This is a bubble sort algorithm
     def bubble_sort(lst):
-    n = len(lst)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if lst[j] > lst[j + 1]:
-                lst[j], lst[j + 1] = lst[j + 1], lst[j]
-    return lst
+        n = len(lst)
+        for i in range(n):
+            for j in range(0, n - i - 1):
+                if lst[j] > lst[j + 1]:
+                    lst[j], lst[j + 1] = lst[j + 1], lst[j]
+        return lst
+
+    print("Hello World")
+\end{lstlisting}
+
+
+\begin{code}
+
+    # This is a bubble sort algorithm
+    def bubble_sort(lst):
+        n = len(lst)
+        for i in range(n):
+            for j in range(0, n - i - 1):
+                if lst[j] > lst[j + 1]:
+                    lst[j], lst[j + 1] = lst[j + 1], lst[j]
+        return lst
+
     print("Hello World")
 \end{code}
 
@@ -246,6 +269,7 @@ The useful indent command from package \tit{changepage}:
         }
     }
 }
+
 
 \np
 \section{Additional Packages}

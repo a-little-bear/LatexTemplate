@@ -1,14 +1,24 @@
 %Template for alittlebear.cls
-%\documentclass[11pt, brown, sepia, 1in]{alittlebear}
-%\def\course{}
-%\def\headername{}
-%\def\name{}
-%\def\email{}
-%\def\info{}
-%\def\logo{}
-%\begin{document}
-%\coverpage[clsfiles/stars]
-%\end{document}
+\iffalse
+
+\documentclass[11pt, brown, sepia, 1in]{alittlebear}
+
+\def\course{}
+\def\headername{}
+\def\name{}
+\def\email{}
+\def\info{}
+\def\logo{}
+
+\begin{document}
+
+\coverpage[clsfiles/stars]
+
+
+
+\end{document}
+
+\fi
 
 
 
@@ -44,6 +54,9 @@
 \DeclareVoidOption{black}{\ekv{color=black}}
 \DeclareVoidOption{brown}{\ekv{color=brown}}
 \DeclareVoidOption{white}{\ekv{color=white}}
+\DeclareVoidOption{red}{\ekv{color=red}}
+\DeclareVoidOption{orange}{\ekv{color=orange}}
+\DeclareVoidOption{purple}{\ekv{color=purple}}
 % margin
 \DeclareStringOption[0.5in]{marg}
 \DeclareVoidOption{1in}{\ekv{marg=1in}}
@@ -73,14 +86,13 @@
 }{\relax}
 
 
-
-\RequirePackage{lmodern, enumitem, needspace} % dynamic line breaking
+\RequirePackage{lmodern, enumitem} % dynamic line breaking
 \RequirePackage{ifthen}
-\RequirePackage{amsmath, amssymb, amsthm, amscd, graphicx}
+\RequirePackage{amsmath, amssymb, amsthm, graphicx}
 \RequirePackage{mathtools} % multlined environment inside align
 \RequirePackage{microtype} % text spacing margin etc
 \RequirePackage{mathrsfs} % for mathscr
-\RequirePackage{listings, accsupp}
+\RequirePackage{listings}
 \RequirePackage{setspace}
 \RequirePackage{multicol}
 
@@ -94,6 +106,10 @@
 %Disable all warnings issued by latex starting with "You have..."
 \WarningFilter{latex}{You have requested package}
 \WarningFilter{fancyhdr}{\footskip is too small}
+\WarningsOff[everypage]
+\WarningFilter{latex}{The lower box part has become overfull}
+\hbadness = 100000
+\hfuzz = 100pt
 
 
 \newcommand\mailto[1]{\href{mailto:#1}{\nolinkurl{#1}}}
@@ -102,14 +118,14 @@
 \RequirePackage{xcolor, fancyhdr, lastpage, fourier-orns, pgfornament}
 \def\headerfootercolor{\color{ecolor!80!black}} %header & footer color
 %header line
-\RequirePackage{skak}
+\RequirePackage{hieroglf}
 \renewcommand{\headrule}{
         \ifcsdef{headername}{
             \headerfootercolor\hrulefill
-            \raisebox{-2.1pt}{\footnotesize\quad\floweroneleft\quad \headername\quad\floweroneright\quad}\hrulefill
+            \raisebox{-2.1pt}{\quad\floweroneleft\quad \headername\quad\floweroneright\quad}\hrulefill
         }{
             \headerfootercolor\hrulefill
-            \raisebox{-2.1pt}{\footnotesize\quad\WhiteKnightOnWhite\WhiteQueenOnWhite\WhitePawnOnWhite\WhiteBishopOnWhite\WhiteRookOnWhite\quad}\hrulefill
+            \raisebox{-2.1pt}{\quad{\pmhgfamily\Hibl\Hibs\Hibw\Hm\Hw\Ha\Hw\Hibp\HR\Hl}\quad}\hrulefill
         }
     }
     %{\color{brown}\begin{center}\pgfornament[width=7cm]{88}\end{center}}
@@ -120,7 +136,6 @@
 
 \newcommand*{\coverpage}[1][clsfiles/stars]{
     \newgeometry{margin = 0in}
-    \vfill
     \begin{titlepage}
         \includegraphics[width=\paperwidth]{#1}
         \vskip-5pt
@@ -135,7 +150,7 @@
 
         % Title
         \color{ecolor}\rule{\linewidth}{0.3mm} \\[0.4cm]
-        \ifcsdef{course}{\centering \huge \bfseries \color{ecolor} \course \\[0.5cm] }{}
+        \ifcsdef{course}{\centering \huge \tbf{ \color{ecolor} \course} \\[0.5cm] }{}
         \ifcsdef{headername}{\centering \huge \bfseries \color{ecolor} \headername \\[0.5cm] }{}
         \color{ecolor}\rule{\linewidth}{0.3mm} \\[1cm]
 
@@ -173,36 +188,17 @@
 
 
 
-
-% listings
-\RequirePackage{listings, xcolor}
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-\newcommand{\noncopynumber}[1]{% keep line numbers from being copied in code listings
-    \BeginAccSupp{method=escape,ActualText={}}
-    #1
-    \EndAccSupp{}
-}
-\lstset{frame=tb,
-    language=\defaultlanguage,
-    aboveskip=3mm,
-    belowskip=3mm,
-    showstringspaces=false,
-    columns=flexible,
-    basicstyle={\small\ttfamily},
-    numberstyle=\scriptsize\noncopynumber,
-    keywordstyle=\color{blue},
-    commentstyle=\color{dkgreen},
-    stringstyle=\color{mauve},
-    breaklines=true,
-    breakatwhitespace=true,
-    tabsize=3,
-    numbers=left,
-}
-
-\lstnewenvironment{code}{\lstset{language=\defaultlanguage}}{}
-\lstnewenvironment{latexcode}{\lstset{language=Tex}}{}
+\lstnewenvironment{code}{
+    \lst@AddToHook{OnEmptyLine}{\addtocounter{lstnumber}{-1}}
+    \lstset{
+        language=\defaultlanguage,
+        numberblanklines=false,
+    }
+}{}
+\lstnewenvironment{latexcode}{\lstset{
+    language=[LaTeX]Tex,
+    numbers=none
+}}{}
 
 
 
@@ -233,9 +229,9 @@
 \RequirePackage[flushmargin,stable]{footmisc}
 \setlength{\footnotesep}{12pt}
 \RequirePackage{titlesec}
-\titleformat*{\section}{\normalfont\Large\bfseries\color{ecolor}}
-\titleformat*{\subsection}{\normalfont\large\bfseries\color{ecolor}}
-\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries\color{ecolor}}
+\titleformat*{\section}{\Large\bfseries\color{ecolor}}
+\titleformat*{\subsection}{\large\bfseries\color{ecolor}}
+\titleformat*{\subsubsection}{\normalsize\bfseries\color{ecolor}}
 % Define colors
 \ifdefstring{\ALB@color}{green}{
     \definecolor{ecolor}{RGB}{0,120,2}%
@@ -286,7 +282,27 @@
     \definecolor{third}{RGB}{0,174,247}%
     \definecolor{textcol}{RGB}{255,255,255}
 }{\relax}
-
+\ifdefstring{\ALB@color}{red}{
+    \definecolor{ecolor}{RGB}{255,0,0}%
+    \definecolor{main}{RGB}{255,0,0}%
+    \definecolor{second}{RGB}{255,0,0}%
+    \definecolor{third}{RGB}{255,0,0}%
+    \definecolor{textcol}{RGB}{0,0,0}
+}{\relax}
+\ifdefstring{\ALB@color}{orange}{
+    \definecolor{ecolor}{RGB}{255,165,0}%
+    \definecolor{main}{RGB}{255,165,0}%
+    \definecolor{second}{RGB}{255,165,0}%
+    \definecolor{third}{RGB}{255,165,0}%
+    \definecolor{textcol}{RGB}{0,0,0}
+}{\relax}
+\ifdefstring{\ALB@color}{purple}{
+    \definecolor{ecolor}{RGB}{128,0,128}%
+    \definecolor{main}{RGB}{128,0,128}%
+    \definecolor{second}{RGB}{128,0,128}%
+    \definecolor{third}{RGB}{128,0,128}%
+    \definecolor{textcol}{RGB}{0,0,0}
+}{\relax}
 \RequirePackage{hologo}
 % good for eye color 
 \ifdefstring{\ALB@mode}{geye}{
@@ -307,9 +323,21 @@
     %\pagecolor{nightcolor}
     \renewcommand{\thmopacity}{0.1}
     \lstset{
+        frame=tb,
+        language=\defaultlanguage,
+        aboveskip=3mm,
+        belowskip=3mm,
+        showstringspaces=false,
+        basicstyle={\small\ttfamily},
+        breaklines=true,
+        breakatwhitespace=true,
+        tabsize=3,
+        numbers=left,
         keywordstyle=\color{second},
         commentstyle=\color{third},
         stringstyle=\color{main},
+        numberstyle=\scriptsize,
+        columns=flexible,
     }
     
     \RequirePackage{background}
@@ -322,7 +350,27 @@
             \includegraphics[width=\paperwidth,height=\paperheight]{\nightmodebackground}
         }
     }
-}{\relax}
+}{
+    \definecolor{dkgreen}{rgb}{0,0.6,0}
+    \definecolor{gray}{rgb}{0.5,0.5,0.5}
+    \definecolor{mauve}{rgb}{0.58,0,0.82}
+    \lstset{frame=tb,
+        language=\defaultlanguage,
+        aboveskip=3mm,
+        belowskip=3mm,
+        showstringspaces=false,
+        columns=flexible,
+        basicstyle={\small\ttfamily},
+        numberstyle=\scriptsize,
+        keywordstyle=\color{blue},
+        commentstyle=\color{dkgreen},
+        stringstyle=\color{mauve},
+        breaklines=true,
+        breakatwhitespace=true,
+        tabsize=3,
+        numbers=left,
+    }
+}
 \let\openbox\relax
 \newcommand{\globalcolor}[1]{%
     \color{#1}\global\let\default@color\current@color

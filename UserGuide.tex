@@ -20,7 +20,7 @@ The DocumentClass \textit{alittlebear.cls} aims to provide a simple and easy tem
 
 \noindent
 Here is the template of a new tex file (note that all 6 \verb=\def= and the cover command are optional): 
-\begin{lstlisting}[language=TeX]
+\begin{latexcode}
     \documentclass[12pt, brown, sepia, 0.5in]{alittlebear}
 
     % \def\course{}
@@ -37,7 +37,7 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
     
     
     \end{document}    
-\end{lstlisting}
+\end{latexcode}
 
 
 
@@ -47,7 +47,7 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 
 \subsection{Document Preamble}\hfill
 
-\verb=\documentclass[#pt,#in,{geye,hazy,sepia,night},{green,cyan,blue,sakura,black,brown,white}]{alittlebear}=
+\verb=\documentclass[#pt,#in,{geye,hazy,sepia,night},{green,...}]{alittlebear}=
 
 \indenv[2]{
     \#pt: font size, default 12pt, 9pt to 13pt
@@ -56,7 +56,7 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 
     \{geye, hazy, sepia, night\}: green, white, or yellow background; or dark mode (best with white or sakura)
 
-    \{green...\}: main color
+    \{green,cyan,blue,sakura,black,brown,white,red,orange,purple\}: main color
 }
 
 \verb=\def\course{#}=
@@ -170,7 +170,7 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
                 }
 \end{verbatim}
 
-\verb=\newh,\newr,\newp=
+\verb=\newh,\newr,\newp, \neweg=
 \explain{New asmthm theorem tcolorbox environment with prefixes}
 \begin{verbatim}
                 Example: \newh{
@@ -181,6 +181,9 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
                 }
                 \newp{
                     This is a new "proof" asmthm tcolorbox environment 
+                }
+                \neweg{
+                    This is a new "Example" asmthm tcolorbox environment
                 }
 \end{verbatim}
 

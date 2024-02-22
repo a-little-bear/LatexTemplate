@@ -1,7 +1,9 @@
 \ProvidesPackage{tcbthm}
 \NeedsTeXFormat{LaTeX2e}
 
-\renewcommand{\qedsymbol}{$_{\scriptstyle \substack{\textsc{quod}\\\textsc{erat}\\\textsc{dem}\scalebox{0.53}{$\blacksquare$}}}$}
+\RequirePackage{starfont} %for nice symbols at the end of environments
+
+\renewcommand{\qedsymbol}{$_{\scriptstyle \substack{\textcolor{ecolor}{\textsc{Quod}}\\\textcolor{ecolor}{\textsc{Erat}}\\\textcolor{ecolor}{\textsc{Dem}}\scalebox{0.53}{\textcolor{ecolor}{$\blacksquare$}}}}$}
 
 \newcommand{\qbreak}{\tcblower}
 \newcommand{\envbreak}{%
@@ -30,6 +32,7 @@
     colback=gray!3!white, colframe=gray!30!white,
     opacityback=\thmopacity,
     opacityframe=\thmopacity,
+    after upper={\hfill\textcolor{ecolor}{\Virgo}},
 }
 \RequirePackage{wasysym} %\smiley
 \newtcolorbox{mathnote}{
@@ -38,7 +41,7 @@
     before skip=10pt, after skip=10pt,
     enforce breakable, left=5mm,
     colback=yellow!3!white, colframe=orange!20!white,
-    after upper={\hfill$\smiley$},
+    after upper={\hfill\textcolor{ecolor}{\Large$\smiley$}},
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -54,6 +57,19 @@
     collower=textcol,
     coltitle=textcol,
 }
+
+
+\newtheorem{example}{Example}
+\tcolorboxenvironment{example}{
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
+    enforce breakable, enhanced,
+    opacityback=0, opacityframe=0,
+    before skip=10pt, after skip=10pt,
+    after upper={\hfill\textcolor{ecolor}{\Cancer}}
+}{}
+\newcommand{\neweg}[1]{\begin{example}#1\end{example}}
 \newtheorem*{hint}{Hint}
 \tcolorboxenvironment{hint}{
     colupper=textcol,
@@ -63,7 +79,7 @@
     opacityback=\thmopacity, opacityframe=\thmopacity,
     before skip=10pt, after skip=10pt,
     colback=yellow!30!white, colframe=yellow!30!white,
-    after upper={\hfill$\bigstar$}
+    after upper={\hfill\textcolor{ecolor}{\Large\Pentagram}}
 }{}
 \newtheorem{remark}{Remark}
 \tcolorboxenvironment{remark}{
@@ -74,7 +90,7 @@
     opacityback=\thmopacity, opacityframe=\thmopacity,
     before skip=10pt, after skip=10pt,
     colback=orange!15!white, colframe=orange!15!white,
-    after upper={\hfill\textcolor{ecolor}{$\triangle$}}
+    after upper={\hfill\textcolor{ecolor}{\Leo}}
 }{}
 \tcolorboxenvironment{proof}{
     colupper=textcol,
@@ -93,7 +109,7 @@
     colbacktitle=blue!10!white, coltitle=red!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\textit{?}\,$}},
+    after upper={\hfill\textcolor{ecolor}{\Ceres}},
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
@@ -105,7 +121,7 @@
     colbacktitle=pink!40!white, coltitle=pink!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\lozenge$}},
+    after upper={\hfill\textcolor{ecolor}{\Pluto}},
     opacityback=\thmopacity, opacityframe=\thmopacity,
     ,boxed title style={
             opacityback=\thmopacity,
@@ -119,6 +135,28 @@
     collower=textcol,
     coltitle=textcol,
 }{claim}
+\newtcbtheorem{proposition}{Proposition}{
+    enforce breakable, enhanced,
+    attach boxed title to top text left = {yshift=-2.50mm},
+    colframe=violet!40!white, colback=violet!5!white,
+    colbacktitle=violet!10!white, coltitle=violet!30!black,
+    arc=1mm, fonttitle=\bfseries,
+    separator sign dash,
+    after upper={\hfill\textcolor{ecolor}{\Moon}},
+    opacityback=\thmopacity, opacityframe=\thmopacity,
+    opacitybacktitle=\thmopacity,
+    ,boxed title style={
+            opacityback=\thmopacity,
+            opacityframe=\thmopacity,
+            colupper=textcol,
+            collower=textcol,
+            coltitle=textcol,
+            coltext=textcol,
+        },
+    colupper=textcol,
+    collower=textcol,
+    coltitle=textcol,
+}{proposition}
 \newtcbtheorem{definition}{Definition}{
     enforce breakable, enhanced,
     attach boxed title to top text left = {yshift=-2.50mm},
@@ -126,7 +164,7 @@
     colbacktitle=olive!10!white, coltitle=olive!30!black,
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
-    after upper={\hfill\textcolor{ecolor}{$\clubsuit$}},
+    after upper={\hfill\textcolor{ecolor}{\Apollon}},
     opacityback=\thmopacity, opacityframe=\thmopacity,
     opacitybacktitle=\thmopacity,
     ,boxed title style={
@@ -150,7 +188,7 @@
     separator sign dash,
     opacityback=\thmopacity, opacityframe=\thmopacity,
     opacitybacktitle=\thmopacity,
-    after upper={\hfill\textcolor{ecolor}{$\heartsuit$}}
+    after upper={\hfill\textcolor{ecolor}{\Sappho}}
     ,boxed title style={
             opacityback=\thmopacity,
             opacityframe=\thmopacity,
@@ -186,6 +224,7 @@
     colupper=textcol,
     collower=textcol,
     coltitle=textcol,
+after upper={\hfill\textcolor{ecolor}{\Vesta}}
 }{theorem}
 \newtcbtheorem{lemma}{Lemma}{
     colupper=textcol,
@@ -198,7 +237,7 @@
     arc=1mm, fonttitle=\bfseries,
     separator sign dash,
     opacityback=\thmopacity, opacityframe=\thmopacity,
-    after upper={\hfill\textcolor{ecolor}{$\spadesuit$}},
+    after upper={\hfill\textcolor{ecolor}{\Eros}},
     opacitybacktitle=\thmopacity,
     ,boxed title style={
             opacityback=\thmopacity,
@@ -301,6 +340,7 @@
 \newcommand{\newu}[3][]{\begin{unit}{#1}{u#2}#3\end{unit}}
 \newcommand{\newch}[3][]{\begin{chapter}{#1}{ch#2}#3\end{chapter}}
 \newcommand{\newd}[3][]{\begin{definition}{#1}{d#2}#3\end{definition}}
+\newcommand{\newpp}[3][]{\begin{proposition}{#1}{pp#2}#3\end{proposition}}
 \newcommand{\newl}[3][]{\begin{lemma}{#1}{l#2}#3\end{lemma}}
 \newcommand{\newcl}[3][]{\begin{claim}{#1}{cl#2}#3\end{claim}}
 \newcommand{\newco}[3][]{\begin{corollary}{#1}{co#2}#3\end{corollary}}
@@ -315,3 +355,4 @@
 \newcommand{\newp}[1]{\begin{proof}#1
         \parskip=\skippar\parindent=\indentpar\end{proof}}
 \newcommand{\newtbox}[2][]{\begin{tbox}{#1}#2\end{tbox}}
+
