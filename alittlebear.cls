@@ -410,6 +410,28 @@
 %number line in * environment, add \lebel{} and refer as \eqref{}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
+% fig command
+\RequirePackage{float}
+\makeatletter
+\define@key{figkeys}{width}{\def\fig@width{#1}}
+\define@key{figkeys}{height}{\def\fig@height{#1}}
+\define@key{figkeys}{label}{\def\fig@label{#1}}
+\define@key{figkeys}{caption}{\def\fig@caption{#1}}
+
+\newcommand{\fig}[2][]{%
+    \begingroup
+    \setkeys{figkeys}{width=0.5\textwidth,height=0.5\textheight,label={},caption={},#1}%
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\fig@width, height=\fig@height, keepaspectratio]{#2}
+        \ifx\fig@caption\empty\else
+            \caption{\fig@caption}
+        \fi
+        \label{fig:\fig@label}
+    \end{figure}
+    \endgroup
+}
+\makeatother
 
 
 

@@ -319,6 +319,35 @@ The variable versions are also included, for example,
 
 \end{verbatim}
 
+\subsection{Image and Listing}
+
+\subsubsection{Image}
+
+Floating and centered figure with fixed ratio:
+\begin{verbatim}
+    \fig[
+        width=0.5\textwidth,
+        height=0.5\textheight,
+        label={},
+        caption={},
+        Optionals
+    ]{path}
+\end{verbatim}
+Only path is required, optional keys are also available.
+
+\subsubsection{Listing}
+
+Listings need to be accessed through the begin and end method:
+\begin{verbatim}
+    \begin{code}[language=\defaultlanguage]
+    ...
+    \end{code}
+
+    \begin{latexcode}[language=[LaTeX]Tex]
+    ...
+    \end{latexcode}
+\end{verbatim}
+
 \newpage
 \section{Other Notable Commands}
 
@@ -358,11 +387,10 @@ The variable versions are also included, for example,
 
 \begin{enumerate}
     \item Nest chapter, exercise, unit together are unlickly to work.
-    \item To improve readability, the environments should try to not be nested. 
-    \item Extend listings and tikzpictures.
-    \item The number counters cannot align with section numbers.
+    \item To improve readability, the environments should try to not be nested, especially during page breaking. 
+    \item The number counters cannot align with section numbers (counters are not well defined).
     \item The color box sometimes touches the footer.
-    \item Make sure use \verb=\np= or \verb=\newpage= for new exercise/unit/chapter so that the page splitting functions properly.
+    \item Make sure use \verb=\np= or \verb=\newpage= for new exercise/unit/chapter so that the page splitting functions properly (due to nested tcolorbox force breakable bug).
 \end{enumerate}
 
 

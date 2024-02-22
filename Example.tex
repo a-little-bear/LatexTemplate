@@ -280,4 +280,25 @@ After using the \tit{mat240} package under folder \tit{clsfiles}, we can see the
 
 Similarily, for \tit{csc240}, we can see $\aand, \iimplies$ all work.
 
+\np
+\section{Images}
+
+\verb=\fig= is very convinient...
+
+\fig{img/2024-02-22-06-56-17.png}
+
+No default caption and label.
+
+\fig[caption=hehe]{img/2024-02-22-07-01-30.png}
+
+The ratio of the image is fixed.
+
+\fig[width=3in,height=1in,caption=byebye world $\int_a^b$, label=hi]{img/2024-02-22-07-01-40.png}
+
+\fig[width=3in,height=5in,caption=hello world $\int_a^b$, label=bye]{img/2024-02-22-07-01-40.png}
+
+Especially with the \verb=PasteImage= plugin. 
+
+Figure \ref{fig:hi} can be referenced in this way.
+
 \end{document}
