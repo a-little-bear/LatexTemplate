@@ -1,5 +1,5 @@
 
-(Download)[https://github.com/a-little-bear/Latex-Template/releases/tag/alpha], (User Guide)[https://github.com/a-little-bear/Latex-Template/blob/main/UserGuide.pdf], (Example)[https://github.com/a-little-bear/Latex-Template/blob/main/Example.pdf]
+[Download](https://github.com/a-little-bear/Latex-Template/releases/tag/alpha), [User Guide](https://github.com/a-little-bear/Latex-Template/blob/main/UserGuide.pdf), [Example](https://github.com/a-little-bear/Latex-Template/blob/main/Example.pdf)
 
 # Introduction
 
@@ -39,4 +39,13 @@ Structure:
 ├── alittlebear.cls
 ├── Examples.tex
 └── UserGuide.tex
+```
+
+Template (what needs to be copied):
+```
+├── clsfiles/
+│   ├── shortcuts.sty
+│   ├── tcbthm.sty
+│   ├── [...].png
+├── alittlebear.cls
 ```
