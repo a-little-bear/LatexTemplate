@@ -34,13 +34,9 @@ Structure:
 │   ├── csc240.sty
 │   ├── mat240.sty
 │   ├── [...].png
-<<<<<<< HEAD
-├── hw.cls
-=======
 ├── img/
 │   ├── [...].png
-├── alittlebear.cls
->>>>>>> dc9777d4dcf81fbcab8fe80698eb04cf9f95c969
+├── hw.cls
 ├── Examples.tex
 └── UserGuide.tex
 ```
@@ -51,5 +47,5 @@ Template (what needs to be copied):
 │   ├── shortcuts.sty
 │   ├── tcbthm.sty
 │   ├── [...].png
-├── alittlebear.cls
+├── hw.cls
 ```
