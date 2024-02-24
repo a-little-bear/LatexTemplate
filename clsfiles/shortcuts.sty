@@ -168,3 +168,25 @@
 {
     \par
 }
+
+
+\let\over\undefined
+% arrows and stacks
+\newcommand{\over}[2]{\overset{#1}{#2}}
+\newcommand{\under}[2]{\underset{#2}{#1}}
+\newcommand{\overunder}[3]{\overset{#1}{\underset{#3}{#2}}}
+
+
+\RequirePackage{xintexpr}
+\newcommand{\Dar}[1][1]{
+    {\left\Downarrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\dar}[1][1]{
+    {\left\downarrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\Uar}[1][1]{
+    {\left\Uparrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\uar}[1][1]{
+    {\left\uparrow\vbox to \dimexpr0.5cm*(#1){}\right.\kern-\nulldelimiterspace}
+}

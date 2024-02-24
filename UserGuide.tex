@@ -1,10 +1,10 @@
-\documentclass[12pt, brown, sepia]{alittlebear}
+\documentclass[12pt, brown, sepia]{hw}
 
 \def\course{MAT114: Latex IV}
 \def\headername{UserGuide XX}
 \def\name{\href{https://alittlebear.us.to}{Joseph Siu}}
 \def\email{joseph.siu@mail.utoronto.ca}
-\def\info{This is the user guide document to the customized latex document class \tit{alittlebear.cls}.}
+\def\info{This is the user guide document to the customized latex document class \tit{hw.cls}.}
 % \def\logo{clsfiles/uoft} % default
 
 \begin{document} 
@@ -16,12 +16,12 @@
 \section{Introduction}
 
 \noindent
-The DocumentClass \textit{alittlebear.cls} aims to provide a simple and easy template for writing math notes on latex. The link to alittlebear.cls, Example.tex, and Template.tex can be found at \url{https://github.com/a-little-bear/Latex-Template}.\\
+The DocumentClass \textit{hw.cls} aims to provide a simple and easy template for writing math notes on latex. The link to hw.cls, Example.tex, and Template.tex can be found at \url{https://github.com/a-little-bear/Latex-Template}.\\
 
 \noindent
 Here is the template of a new tex file (note that all 6 \verb=\def= and the cover command are optional): 
 \begin{latexcode}
-    \documentclass[12pt, brown, sepia, 0.5in]{alittlebear}
+    \documentclass[12pt, brown, sepia, 0.5in]{hw}
 
     % \def\course{}
     % \def\headername{}
@@ -47,7 +47,7 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 
 \subsection{Document Preamble}\hfill
 
-\verb=\documentclass[#pt,#in,{geye,hazy,sepia,night},{green,...}]{alittlebear}=
+\verb=\documentclass[#pt,#in,{geye,hazy,sepia,night},{green,...}]{hw}=
 
 \indenv[2]{
     \#pt: font size, default 12pt, 9pt to 13pt
@@ -252,6 +252,9 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 \verb=\sgn{sgn}=
 \explain{defined math operator sgn as the sign function}
 
+\verb=\over{#1}{#2},\under{#1}{#2},\overunder{#1}{#2}{#3}=
+\explain{Abbreviations of overset underset, follow the order from top to bottom}
+
 
 
 \newpage\subsection{Symbol Abbreviations}\hfill
@@ -317,6 +320,10 @@ The variable versions are also included, for example,
   \O -> \mathcal{O} == big O 
   \relate -> \mathcal{R} == relate (relation)
 
+  \Dar[1][1] = scaled Downarrow
+  \dar[1][1] = scaled downarrow
+  \Uar[1][1] = scaled Uparrow
+  \uar[1][1] = scaled uparrow
 \end{verbatim}
 
 \subsection{Image and Listing}

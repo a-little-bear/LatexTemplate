@@ -1,4 +1,4 @@
-\documentclass[12pt, orange, night, 0.5in]{alittlebear}
+\documentclass[12pt, orange, night, 0.5in]{hw}
 
 \usepackage{clsfiles/mat240}
 \usepackage{clsfiles/csc240}
@@ -7,7 +7,7 @@
 %\def\headername{Assignment 0}
 \def\name{\href{https://alittlebear.us.to}{Joseph Siu}}
 \def\email{joseph.siu@mail.utoronto.ca}
-\def\info{This is the abstract. This document intent to provide an example for the customized alittlebear.cls Document Class. This sentence is intend to increase the length of the Info for testing purposes. In addition, I have no copyright to Goat Qun sensei's image at the right: \href{https://www.qunwang330.com/}{qun's blog}. Command \tit{headername} is also commented to illustrate the default header.}
+\def\info{This is the abstract. This document intent to provide an example for the customized hw.cls Document Class. This sentence is intend to increase the length of the Info for testing purposes. In addition, I have no copyright to Goat Qun sensei's image at the right: \href{https://www.qunwang330.com/}{qun's blog}. Command \tit{headername} is also commented to illustrate the default header.}
 \def\logo{clsfiles/qunwang}
 
 \begin{document} 
@@ -23,7 +23,7 @@
 }
 
 \newch{1}{
-    This exercise helps the readers to understand the basic usage of TColorBox environments created by \tit{alittlebear.cls}.
+    This exercise helps the readers to understand the basic usage of TColorBox environments created by \tit{hw.cls}.
 
     \newq{1ch1}{
         Prove that $\sqrt2$ cannot rational.
@@ -300,5 +300,40 @@ The ratio of the image is fixed.
 Especially with the \verb=PasteImage= plugin. 
 
 Figure \ref{fig:hi} can be referenced in this way.
+
+\np
+\section{Arrows and Stacks}
+
+Vertical Equal symbol is too hard to implement so only vertical arrow and Arrow are provided, the horizontal ones are covered by mathtool package with the commands xleftarrow etc.
+
+$$\T{bye}\Dar[2]\int_a^b f(x)\D x\quad\quad\quad\dar[2]n\to\infty$$
+$$\T{bye}\Uar[2]\int_a^b f(x)\D x\quad\quad\quad\uar[2]n\to\infty$$
+
+
+\begin{align*}
+    &a & &= & &b \\
+    n\to\infty&\dar & &  & &\uar u = n + 1 \\
+    &x & &= & &y
+\end{align*}
+
+You can do this to reduce the width between the alignments:
+
+% centering
+\begin{center}
+    % reduce the width of the page align is on
+    \begin{minipage}{0.5\textwidth}
+        \begin{align*}
+            &a & &= & &b \\
+            n\to\infty&\dar & &  & &\uar u = n + 1 \\
+            &x & &= & &y
+        \end{align*}
+    \end{minipage}
+\end{center}
+
+hello, over under and overunder follow the order from top to bottom, in my opinion this is more intuitive that the asmmath method, anyway,
+
+$\over{a}{b}$, $\under{b}{c}$, $\overunder{a}{b}{c}$ testing spacing
+
+end of doc
 
 \end{document}

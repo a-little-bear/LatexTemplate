@@ -31,7 +31,7 @@ Structure:
 │   ├── csc240.sty
 │   ├── mat240.sty
 │   ├── [...].png
-├── alittlebear.cls
+├── hw.cls
 ├── Examples.tex
 └── UserGuide.tex
 ```
