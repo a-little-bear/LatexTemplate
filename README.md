@@ -1,3 +1,6 @@
+
+[Download](https://github.com/a-little-bear/Latex-Template/releases/tag/alpha), [User Guide](https://github.com/a-little-bear/Latex-Template/blob/main/UserGuide.pdf), [Example](https://github.com/a-little-bear/Latex-Template/blob/main/Example.pdf)
+
 # Introduction
 
 This is a latex template for homework / note taking. The main feature of this template is the tcolorboxes with different colors, and ending symbols. Moreover, the abbreviations of all these tcolor theorem boxes environments help the user effectively records notes during lectures.
@@ -31,11 +34,22 @@ Structure:
 │   ├── csc240.sty
 │   ├── mat240.sty
 │   ├── [...].png
+<<<<<<< HEAD
 ├── hw.cls
+=======
+├── img/
+│   ├── [...].png
+├── alittlebear.cls
+>>>>>>> dc9777d4dcf81fbcab8fe80698eb04cf9f95c969
 ├── Examples.tex
 └── UserGuide.tex
 ```
 
-TODO:
-- Use *xparse* or *xargs* for image / figure environments (abbreviations) with multiple optional keys
-- Modify multipage / minipage environments
+Template (what needs to be copied):
+```
+├── clsfiles/
+│   ├── shortcuts.sty
+│   ├── tcbthm.sty
+│   ├── [...].png
+├── alittlebear.cls
+```
