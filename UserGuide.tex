@@ -1,4 +1,4 @@
-\documentclass[12pt, brown, sepia]{hw}
+\documentclass[12pt, cyan, night]{hw}
 
 \def\course{MAT114: Latex IV}
 \def\headername{UserGuide XX}
@@ -226,6 +226,8 @@ Here is the template of a new tex file (note that all 6 \verb=\def= and the cove
 \end{verbatim}
 \ind[20]{(left) = (right) + (explanation)}
 
+Similarly \verb=\Alleq=, \verb=\Algeq= are for $\le, \ge$.
+
 \verb=\cd{\cdot}=
 \explain{Abbreviation of $\backslash$cdot}
 
@@ -388,6 +390,46 @@ Listings need to be accessed through the begin and end method:
 \verb=\aand,\oor,\iimplies,\iif,\xor=
 \explain{The weird symbols for CSC240}
 
+\subsection{Alg}
+
+This is a package designed for pseudocode. For sample usage please refer to Example.tex
+
+\verb=\usepackage[noend,noline]{clsfiles/alg}=
+
+noend parameter removes the ending keywards, noline removes the line numbers.
+
+To use the algorithm / aogirithmic environment: \verb=\newalg[]{}= where the optional parameter is the title of the algorithm.
+
+\begin{latexcode}
+    \afunc{name}{para}{content}
+    \afor{condition}{content}
+    \aforall{condition}{content}
+    \awh{condition}{content}
+    \arep{content}{termination}
+    \aproc{name}{para}{content}
+    \alo{content}
+
+    \aif{condition}{
+        content
+    \aelif{condition}
+        content
+    \aelse
+        content
+    }
+
+    \as \State - new line
+    \ase \Statex - new line without line number
+
+\end{latexcode}
+
+Moreover,
+
+\begin{latexcode}
+    \ato - bolded to
+    \alen{#1} - $#1.length$
+    \ag{#1}{#2} - $#1 \gets #2$
+\end{latexcode}
+
 
 \newpage
 \section{Known Bugs / Improvements}
@@ -398,6 +440,7 @@ Listings need to be accessed through the begin and end method:
     \item The number counters cannot align with section numbers (counters are not well defined).
     \item The color box sometimes touches the footer.
     \item Make sure use \verb=\np= or \verb=\newpage= for new exercise/unit/chapter so that the page splitting functions properly (due to nested tcolorbox force breakable bug).
+    \item Allow more line spacing for alg package.
 \end{enumerate}
 
 

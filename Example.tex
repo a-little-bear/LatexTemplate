@@ -2,6 +2,7 @@
 
 \usepackage{clsfiles/mat240}
 \usepackage{clsfiles/csc240}
+\usepackage[noend, noline]{clsfiles/alg}
 
 \def\course{MAT001: Introduction to C++ Template}
 %\def\headername{Assignment 0}
@@ -9,6 +10,8 @@
 \def\email{joseph.siu@mail.utoronto.ca}
 \def\info{This is the abstract. This document intent to provide an example for the customized hw.cls Document Class. This sentence is intend to increase the length of the Info for testing purposes. In addition, I have no copyright to Goat Qun sensei's image at the right: \href{https://www.qunwang330.com/}{qun's blog}. Command \tit{headername} is also commented to illustrate the default header.}
 \def\logo{clsfiles/qunwang}
+
+\newop{\A}{A}
 
 \begin{document} 
 
@@ -334,6 +337,57 @@ hello, over under and overunder follow the order from top to bottom, in my opini
 
 $\over{a}{b}$, $\under{b}{c}$, $\overunder{a}{b}{c}$ testing spacing
 
-end of doc
+end of doc (ofc not)
+
+\np
+\section{Algorithm}
+
+Sample Usage:
+
+\begin{latexcode}
+\usepackage[noend, noline]{clsfiles/alg}
+\newop{\A}{A}
+\begin{document}
+\newalg[This is not a caption]{
+    \as \ag{j}{0}
+    \afor{\ag{i}{1}\ato\A}{
+        \aif{$i$ is even}{
+            \as \ag{j}{i}
+        \aelif{$i$ is odd}
+            \as \ag{j}{i+1} \Comment{?}
+        \aelse
+            \as \ag{j}{-1}
+        }
+    }
+    \afunc{Name}{\A}{
+        \awh{$\A\neq0$}{
+            \as \ag{j}{A}
+        }
+    }
+}
+\end{document}
+\end{latexcode}
+
+which produces:
+
+\newalg[This is not a caption]{
+    \as \ag{j}{0}
+    \afor{\ag{i}{1}\ato\A}{
+        \aif{$i$ is even}{
+            \as \ag{j}{i}
+        \aelif{$i$ is odd}
+            \as \ag{j}{i+1} \Comment{?}
+        \aelse
+            \as \ag{j}{-1}
+        }
+    }
+    \afunc{Name}{\A}{
+        \awh{$\A\neq0$}{
+            \as \ag{j}{A}
+        }
+    }
+}
+
+Don't forget the \verb=\as= to make new line.
 
 \end{document}

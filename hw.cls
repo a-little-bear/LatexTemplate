@@ -1,7 +1,7 @@
 %Template for hw.cls
 \iffalse
 
-\documentclass[11pt, brown, sepia, 1in]{hw}
+\documentclass[11pt, cyan, night, 1in]{hw}
 
 \def\course{}
 \def\headername{}

@@ -1,0 +1,78 @@
+\ProvidesPackage{alg}
+\NeedsTeXFormat{LaTeX2e}
+
+
+\RequirePackage{algorithm}
+
+% https://mirror.quantum5.ca/CTAN/macros/latex/contrib/algorithmicx/algorithmicx.pdf
+
+\newif\if@noend
+\@noendfalse
+
+\newif\if@noline
+\@nolinefalse
+
+\DeclareOption{noline}{\@nolinetrue}
+
+\DeclareOption{noend}{\@noendtrue}
+
+\ProcessOptions\relax
+
+\RequirePackage{algorithm}
+
+\if@noend
+    \RequirePackage[noend]{algpseudocode}\renewcommand\algorithmicthen{}
+    \renewcommand\algorithmicdo{}
+\else
+    \RequirePackage{algpseudocode}
+\fi
+
+
+
+
+\newcommand{\as}{\State}
+\newcommand{\ase}{\Statex}
+
+\newcommand{\afunc}[3]{\Function{#1}{#2}#3\EndFunction}
+\newcommand{\afor}[2]{\For{#1}#2\EndFor}
+\newcommand{\aforall}[2]{\ForAll{#1} #2 \EndFor}
+\newcommand{\awh}[2]{\While{#1}#2\EndWhile}
+\newcommand{\arep}[2]{ \Repeat #1 \Until{#2}}
+\newcommand{\aproc}[3]{\Procedure{#1}{#2} #3 \EndProcedure}
+\newcommand{\alo}[1]{\Loop #1 \EndLoop}
+
+
+\newcommand{\aif}[2]{\If{#1}#2\EndIf}
+\newcommand{\aelif}[1]{\ElsIf{#1}}
+\newcommand{\aelse}{\Else}
+
+
+\newcommand{\ato}{\tbf{ to }}
+% \newcommand{\alen}[1]{$#1.length$}
+\newcommand{\alen}[1]{\ifmmode #1.\text{length} \else $#1.\text{length}$ \fi}
+\newcommand{\ag}[2]{\ifmmode #1 \gets #2 \else $#1 \gets #2$ \fi}
+
+% For []
+% 0 means no line numbering
+% 1 means line numbering 1 2 3...
+% n means line numbering 1n, 2n, 3n...
+\if@noline
+    \newcommand{\newalg}[2][]{
+        \begin{algorithm}
+            \caption{#1}
+            \begin{algorithmic}[0]
+                #2
+            \end{algorithmic}
+        \end{algorithm}
+    }
+\else
+    \newcommand{\newalg}[2][]{
+        \begin{algorithm}
+            \caption{#1}
+            \begin{algorithmic}[1]
+                #2
+            \end{algorithmic}
+        \end{algorithm}
+    }
+\fi
+    
