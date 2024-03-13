@@ -33,6 +33,7 @@ Structure:
 │   ├── tcbthm.sty
 │   ├── csc240.sty
 │   ├── mat240.sty
+│   ├── alg.sty
 │   ├── [...].png
 ├── img/
 │   ├── [...].png
