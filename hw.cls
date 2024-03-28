@@ -20,12 +20,13 @@
 
 \fi
 
-\def\clsfiles{LatexTemplate/clsfiles}
-
 
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{LatexTemplate/hw}[2024/03/27 LatexTemplate/hw]
+
+\def\clsfiles{LatexTemplate/clsfiles}
+\newcommand{\useclspackage}[2][]{\usepackage[#1]{\clsfiles/#2}}
 
 %settings
 \def\filename{\headername} %name of file
@@ -35,7 +36,9 @@
 \def\defaultlanguage{python}
 
 \newcommand{\thmopacity}{0.8} %opacity of theorem box, default: night mode
-\newcommand{\nightmodebackground}{LatexTemplate/clsfiles/nightsky} %background of night mode
+\newcommand{\nightmodebackground}{\clsfiles/nightsky} %background of night mode
+
+
 
 
 
@@ -136,7 +139,7 @@
     \headerfootercolor\hrulefill
     \raisebox{-2.1pt}{\quad\decofourleft\leafSE\quad\footnotesize Page \thepage\ of \pageref{LastPage}\quad\leafSW\decofourright\quad}\hrulefill}
 
-\newcommand*{\coverpage}[1][LatexTemplate/clsfiles/stars]{
+\newcommand*{\coverpage}[1][\clsfiles/stars]{
     \newgeometry{margin = 0in}
     \begin{titlepage}
         \includegraphics[width=\paperwidth]{#1}
@@ -167,7 +170,7 @@
                 \hfill
             \end{minipage}
             \begin{minipage}{0.5\textwidth}
-                \ifcsdef{logo}{\includegraphics[width=\textwidth/2]{\logo}}{\includegraphics[width=\textwidth/2]{LatexTemplate/clsfiles/uoft}}
+                \ifcsdef{logo}{\includegraphics[width=\textwidth/2]{\logo}}{\includegraphics[width=\textwidth/2]{\clsfiles/uoft}}
             \end{minipage}
         }
     \end{titlepage}
@@ -450,13 +453,13 @@
 
 
 
-\RequirePackage{LatexTemplate/clsfiles/shortcuts}
+\RequirePackage{\clsfiles/shortcuts}
 %color boxes
 \RequirePackage[breakable, skins, theorems]{tcolorbox}
 %use \tcblower for break
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
 \theoremstyle{\thmstyle}
-\RequirePackage{LatexTemplate/clsfiles/tcbthm}
+\RequirePackage{\clsfiles/tcbthm}
 
 
 
