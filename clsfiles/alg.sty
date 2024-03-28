@@ -6,15 +6,16 @@
 
 % https://mirror.quantum5.ca/CTAN/macros/latex/contrib/algorithmicx/algorithmicx.pdf
 
-\newif\if@noend
-\@noendfalse
-
 \newif\if@noline
 \@nolinefalse
+\newif\if@noend
+\@noendfalse
+\newif\if@nocap
+\@nocapfalse
 
 \DeclareOption{noline}{\@nolinetrue}
-
 \DeclareOption{noend}{\@noendtrue}
+\DeclareOption{nocap}{\@nocaptrue}
 
 \ProcessOptions\relax
 
@@ -47,9 +48,9 @@
 \newcommand{\aelse}{\Else}
 
 
-\newcommand{\ato}{\tbf{ to }}
+\newcommand{\ato}{\tbf{to }}
 % \newcommand{\alen}[1]{$#1.length$}
-\newcommand{\alen}[1]{\ifmmode #1.\text{length} \else $#1.\text{length}$ \fi}
+\newcommand{\alen}[1]{\ifmmode #1.length \else $#1.length$ \fi}
 \newcommand{\ag}[2]{\ifmmode #1 \gets #2 \else $#1 \gets #2$ \fi}
 
 % For []
@@ -57,22 +58,53 @@
 % 1 means line numbering 1 2 3...
 % n means line numbering 1n, 2n, 3n...
 \if@noline
-    \newcommand{\newalg}[2][]{
-        \begin{algorithm}
-            \caption{#1}
-            \begin{algorithmic}[0]
-                #2
-            \end{algorithmic}
-        \end{algorithm}
-    }
+    \if@nocap
+        \newcommand{\newalg}[2][]{
+            \begin{algorithm}
+                \begin{algorithmic}[0]
+                    #2
+                \end{algorithmic}
+            \end{algorithm}
+        }
+    \else
+        \newcommand{\newalg}[2][]{
+            \begin{algorithm}
+                \caption{#1}
+                \begin{algorithmic}[0]
+                    #2
+                \end{algorithmic}
+            \end{algorithm}
+        }
+    \fi
 \else
-    \newcommand{\newalg}[2][]{
-        \begin{algorithm}
-            \caption{#1}
-            \begin{algorithmic}[1]
-                #2
-            \end{algorithmic}
-        \end{algorithm}
-    }
+    \if@nocap
+        \newcommand{\newalg}[2][]{
+            \begin{algorithm}
+                \begin{algorithmic}[1]
+                    #2
+                \end{algorithmic}
+            \end{algorithm}
+        }
+    \else
+        \newcommand{\newalg}[2][]{
+            \begin{algorithm}
+                \caption{#1}
+                \begin{algorithmic}[1]
+                    #2
+                \end{algorithmic}
+            \end{algorithm}
+        }
+    \fi
 \fi
-    
+
+\newcommand{\newfunc}[2]{
+    \begin{algorithm}
+        #1
+        \begin{algorithmic}[1]
+            #2
+        \end{algorithmic}
+    \end{algorithm}
+}
+
+\newcommand{\nofuncname}{\algrenewcommand\algorithmicfunction{}}
+\newcommand{\noprocname}{\algrenewcommand\algorithmicprocedure{}}\algrenewcommand\alglinenumber[1]{\footnotesize #1}

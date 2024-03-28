@@ -136,8 +136,12 @@
     %{\color{brown}\begin{center}\pgfornament[width=7cm]{88}\end{center}}
 %footer line
 \renewcommand{\footrule}{
+    \ifdefstring{\ALB@marg}{1in}{
+        \vspace{15pt}
+    }{\relax}
     \headerfootercolor\hrulefill
-    \raisebox{-2.1pt}{\quad\decofourleft\leafSE\quad\footnotesize Page \thepage\ of \pageref{LastPage}\quad\leafSW\decofourright\quad}\hrulefill}
+    \raisebox{-2.1pt}{\quad\decofourleft\leafSE\quad\footnotesize Page \thepage\ of \pageref{LastPage}\quad\leafSW\decofourright\quad}\hrulefill
+}
 
 \newcommand*{\coverpage}[1][\clsfiles/stars]{
     \newgeometry{margin = 0in}
@@ -407,7 +411,7 @@
 % source1: https://tex.stackexchange.com/questions/41408/a-five-level-deep-list
 % source2: https://tex.stackexchange.com/questions/318199/change-color-of-itemize-bullet 
 \RequirePackage{changepage} % for adjustwidth environment
-\newcommand{\indenv}[2][1]{
+\newcommand{\indenv}[2][0.5]{
     \begin{adjustwidth}{#1cm}{}
         #2
     \end{adjustwidth}

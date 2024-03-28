@@ -1,6 +1,8 @@
 \ProvidesPackage{csc240}[2022/02/22 v1.0 csc240 style file]
 \NeedsTeXFormat{LaTeX2e}
 
+\RequirePackage{comment}
+
 %%% Logic
 \newcommand{\nnot}{\mathrm{NOT}}
 \newcommand{\aand}{\,\,\mathrm{AND}\,\,}
@@ -78,18 +80,16 @@
 }}
 
 
+\newop{\TO}{\tbf{to}}
+\newop{\DO}{\tbf{do}}
+\newop{\THEN}{\tbf{then}}
+\newop{\RTN}{\tbf{return}}
+\newop{\Precon}{\tbf{Precondition}}
+\newop{\Postcon}{\tbf{Postcondition}}
+\newop{\Termi}{\tbf{Termination}}
+
+\RequirePackage{comment}
 
 
 
 
-\newcommand{\newfunc}[2]{
-        \begin{algorithm}
-                #1
-                \begin{algorithmic}[1]
-                        #2
-                \end{algorithmic}
-        \end{algorithm}
-}
-
-\newcommand{\nofuncname}{\algrenewcommand\algorithmicfunction{}}
-\newcommand{\noprocname}{\algrenewcommand\algorithmicprocedure{}}\algrenewcommand\alglinenumber[1]{\footnotesize #1}
