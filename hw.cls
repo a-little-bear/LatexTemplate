@@ -12,13 +12,15 @@
 
 \begin{document}
 
-\coverpage[LatexTemplate/clsfiles/stars]
+\coverpage[\clsfiles/stars]
 
 
 
 \end{document}
 
 \fi
+
+\def\clsfiles{LatexTemplate/clsfiles}
 
 
 
