@@ -139,6 +139,9 @@
     \ifdefstring{\ALB@marg}{1in}{
         \vspace{15pt}
     }{\relax}
+    \ifdefstring{\ALB@marg}{0.5in}{
+        \vspace{-5pt}
+    }{\relax}
     \headerfootercolor\hrulefill
     \raisebox{-2.1pt}{\quad\decofourleft\leafSE\quad\footnotesize Page \thepage\ of \pageref{LastPage}\quad\leafSW\decofourright\quad}\hrulefill
 }
