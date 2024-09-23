@@ -1,7 +1,10 @@
-\ProvidesPackage{thm}
+\ProvidesPackage{tcbthm}
 \NeedsTeXFormat{LaTeX2e}
 
+\RequirePackage{starfont} %for nice symbols at the end of environments
+
 \renewcommand{\qedsymbol}{$_{\scriptstyle \substack{\textcolor{ecolor}{\textsc{Quod}}\\\textcolor{ecolor}{\textsc{Erat}}\\\textcolor{ecolor}{\textsc{Dem}}\scalebox{0.53}{\textcolor{ecolor}{$\blacksquare$}}}}$}
+
 
 
 \newtheorem{mathnote}{Mathnote}
@@ -9,16 +12,16 @@
 \newtheorem{example}{Example}
 \newtheorem*{hint}{Hint}
 \newtheorem{remark}{Remark}
+\RequirePackage{varwidth}
 
-\newcommand{\newq}[1]{\begin{question}#1\end{question}}
-\newcommand{\newe}[1]{\begin{exercise}#1\end{exercise}}
-\newcommand{\newd}[1]{\begin{definition}#1\end{definition}}
-\newcommand{\newpp}[1]{\begin{proposition}#1\end{proposition}}
-\newcommand{\newl}[1]{\begin{lemma}#1\end{lemma}}
-\newcommand{\newcl}[1]{\begin{claim}#1\end{claim}}
-\newcommand{\newco}[1]{\begin{corollary}#1\end{corollary}}
-\newcommand{\newt}[1]{\begin{theorem}#1\end{theorem}}
-
+\newcommand{\newq}[3][]{\begin{question}#1\label{q#2}#3\end{question}}
+\newcommand{\newe}[3][]{\begin{exercise}#1\label{e#2}#3\end{exercise}}
+\newcommand{\newd}[3][]{\begin{definition}#1\label{d#2}#3\end{definition}}
+\newcommand{\newpp}[3][]{\begin{proposition}#1\label{pp#2}#3\end{proposition}}
+\newcommand{\newl}[3][]{\begin{lemma}#1\label{l#2}#3\end{lemma}}
+\newcommand{\newcl}[3][]{\begin{claim}#1\label{cl#2}#3\end{claim}}
+\newcommand{\newco}[3][]{\begin{corollary}#1\label{co#2}#3\end{corollary}}
+\newcommand{\newt}[3][]{\begin{theorem}#1\label{t#2}#3\end{theorem}}
 \newcommand{\neweg}[1]{\begin{example}#1\end{example}}
 \newcommand{\newr}[1]{\begin{remark}#1\end{remark}}
 \newcommand{\newn}[1]{\begin{note}
