@@ -466,5 +466,8 @@
     \RequirePackage{\clsfiles/clsthm}
 }{\relax}
 
+\newtheorem*{hint}{Hint}
+\newcommand{\newh}[1]{\begin{hint}#1\end{hint}}
+
 \pagestyle{style}
 \RequirePackage[skip=\skippar, indent=\indentpar]{parskip}
