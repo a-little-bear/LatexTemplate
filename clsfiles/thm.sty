@@ -1,0 +1,31 @@
+\ProvidesPackage{thm}
+\NeedsTeXFormat{LaTeX2e}
+
+\renewcommand{\qedsymbol}{$_{\scriptstyle \substack{\textcolor{ecolor}{\textsc{Quod}}\\\textcolor{ecolor}{\textsc{Erat}}\\\textcolor{ecolor}{\textsc{Dem}}\scalebox{0.53}{\textcolor{ecolor}{$\blacksquare$}}}}$}
+
+
+\newtheorem{mathnote}{Mathnote}
+\newtheorem{note}{Note}
+\newtheorem{example}{Example}
+\newtheorem*{hint}{Hint}
+\newtheorem{remark}{Remark}
+
+\newcommand{\newq}[1]{\begin{question}#1\end{question}}
+\newcommand{\newe}[1]{\begin{exercise}#1\end{exercise}}
+\newcommand{\newd}[1]{\begin{definition}#1\end{definition}}
+\newcommand{\newpp}[1]{\begin{proposition}#1\end{proposition}}
+\newcommand{\newl}[1]{\begin{lemma}#1\end{lemma}}
+\newcommand{\newcl}[1]{\begin{claim}#1\end{claim}}
+\newcommand{\newco}[1]{\begin{corollary}#1\end{corollary}}
+\newcommand{\newt}[1]{\begin{theorem}#1\end{theorem}}
+
+\newcommand{\neweg}[1]{\begin{example}#1\end{example}}
+\newcommand{\newr}[1]{\begin{remark}#1\end{remark}}
+\newcommand{\newn}[1]{\begin{note}
+        \parskip=\skippar\parindent=\indentpar#1\end{note}}
+\newcommand{\newm}[1]{\begin{mathnote}
+        \parskip=\skippar\parindent=\indentpar#1\end{mathnote}}
+\newcommand{\newh}[1]{\begin{hint}#1\end{hint}}
+\newcommand{\newp}[1]{\begin{proof}#1
+        \parskip=\skippar\parindent=\indentpar\end{proof}}
+

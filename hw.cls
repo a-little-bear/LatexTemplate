@@ -72,6 +72,11 @@
 \DeclareVoidOption{hazy}{\ekv{mode=hazy}}
 \DeclareVoidOption{sepia}{\ekv{mode=sepia}}
 \DeclareVoidOption{night}{\ekv{mode=night}}
+% tcb style
+\DeclareStringOption[colorful]{tcbstyle}
+\DeclareVoidOption{formal}{\ekv{tcbstyle=formal}}
+\DeclareVoidOption{colorful}{\ekv{tcbstyle=colorful}}
+% fontsize
 \DeclareStringOption[11pt]{fontsize}
 \DeclareVoidOption{10pt}{\ekv{fontsize=10pt}}
 \DeclareVoidOption{11pt}{\ekv{fontsize=11pt}}
@@ -466,7 +471,13 @@
 %use \tcblower for break
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
 \theoremstyle{\thmstyle}
-\RequirePackage{\clsfiles/tcbthm}
+\ifdefstring{\ALB@tcbstyle}{formal}{
+    \RequirePackage{\clsfiles/thm}
+}{\relax}
+\ifdefstring{\ALB@tcbstyle}{colorful}{
+    \RequirePackage{\clsfiles/tcbthm}
+}{\relax}
+
 
 
 
