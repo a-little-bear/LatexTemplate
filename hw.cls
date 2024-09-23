@@ -1,10 +1,12 @@
 %Template for LatexTemplate/hw.cls
 \iffalse
 
-    \documentclass[11pt, cyan, night, 1in]{LatexTemplate/hw}
+    \documentclass[11pt, cyan, night, 1in, colorful]{LatexTemplate/hw}
 
-    \def\course{}
     \def\headername{}
+
+    % These are optinal without coverpage
+    \def\course{}
     \def\name{}
     \def\email{}
     \def\info{}
@@ -451,16 +453,17 @@
 \makeatother
 
 \RequirePackage{\clsfiles/shortcuts}
+
 %color boxes
-\RequirePackage[breakable, skins, theorems]{tcolorbox}
-%use \tcblower for break
-%use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
-\theoremstyle{\thmstyle}
+\ifdefstring{\ALB@clsthmstyle}{colorful}{
+    \RequirePackage[breakable, skins, theorems]{tcolorbox}
+    \theoremstyle{\thmstyle}
+    %use \tcblower for break
+    %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
+    \RequirePackage{\clsfiles/tcbthm}
+}{\relax}
 \ifdefstring{\ALB@clsthmstyle}{formal}{
     \RequirePackage{\clsfiles/clsthm}
-}{\relax}
-\ifdefstring{\ALB@clsthmstyle}{colorful}{
-    \RequirePackage{\clsfiles/tcbthm}
 }{\relax}
 
 \pagestyle{style}
