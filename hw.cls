@@ -450,21 +450,6 @@
 }
 \makeatother
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \RequirePackage{\clsfiles/shortcuts}
 %color boxes
 \RequirePackage[breakable, skins, theorems]{tcolorbox}
@@ -472,17 +457,11 @@
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
 \theoremstyle{\thmstyle}
 \ifdefstring{\ALB@clsthmstyle}{formal}{
-    \RequirePackage{\clsfiles/thm}
+    \RequirePackage{\clsfiles/clsthm}
 }{\relax}
 \ifdefstring{\ALB@clsthmstyle}{colorful}{
     \RequirePackage{\clsfiles/tcbthm}
 }{\relax}
-
-
-
-
-
-
 
 \pagestyle{style}
 \RequirePackage[skip=\skippar, indent=\indentpar]{parskip}
