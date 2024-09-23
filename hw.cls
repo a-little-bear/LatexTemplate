@@ -460,7 +460,23 @@
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
 \RequirePackage{\clsfiles/tcbthm}
 \ifdefstring{\ALB@clsthmstyle}{formal}{
-    \RequirePackage{\clsfiles/clsthm}
+    \renewcommand{\newh}[1]{\begin{hint}#1\end{hint}}
+    \renewcommand{\newq}[3][]{\begin{question}#1\label{q#2}#3\end{question}}
+    \renewcommand{\newe}[3][]{\begin{exercise}#1\label{e#2}#3\end{exercise}}
+    \renewcommand{\newd}[3][]{\begin{definition}#1\label{d#2}#3\end{definition}}
+    \renewcommand{\newpp}[3][]{\begin{proposition}#1\label{pp#2}#3\end{proposition}}
+    \renewcommand{\newl}[3][]{\begin{lemma}#1\label{l#2}#3\end{lemma}}
+    \renewcommand{\newcl}[3][]{\begin{claim}#1\label{cl#2}#3\end{claim}}
+    \renewcommand{\newco}[3][]{\begin{corollary}#1\label{co#2}#3\end{corollary}}
+    \renewcommand{\newt}[3][]{\begin{theorem}#1\label{t#2}#3\end{theorem}}
+    \renewcommand{\neweg}[1]{\begin{example}#1\end{example}}
+    \renewcommand{\newr}[1]{\begin{remark}#1\end{remark}}
+    \renewcommand{\newn}[1]{\begin{note}
+            \parskip=\skippar\parindent=\indentpar#1\end{note}}
+    \renewcommand{\newm}[1]{\begin{mathnote}
+            \parskip=\skippar\parindent=\indentpar#1\end{mathnote}}
+    \renewcommand{\newh}[1]{\begin{hint}#1\end{hint}}
+    \renewcommand{\newp}[1]{\begin{proof}#1\end{proof}}
 }{\relax}
 
 \pagestyle{style}
