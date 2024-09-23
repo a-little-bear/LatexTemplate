@@ -454,20 +454,14 @@
 
 \RequirePackage{\clsfiles/shortcuts}
 
-%color boxes
-\ifdefstring{\ALB@clsthmstyle}{colorful}{
-    \RequirePackage[breakable, skins, theorems]{tcolorbox}
-    \theoremstyle{\thmstyle}
-    %use \tcblower for break
-    %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
-    \RequirePackage{\clsfiles/tcbthm}
-}{\relax}
+\RequirePackage[breakable, skins, theorems]{tcolorbox}
+\theoremstyle{\thmstyle}
+%use \tcblower for break
+%use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
+\RequirePackage{\clsfiles/tcbthm}
 \ifdefstring{\ALB@clsthmstyle}{formal}{
     \RequirePackage{\clsfiles/clsthm}
 }{\relax}
-
-\newtheorem*{hint}{Hint}
-\newcommand{\newh}[1]{\begin{hint}#1\end{hint}}
 
 \pagestyle{style}
 \RequirePackage[skip=\skippar, indent=\indentpar]{parskip}
