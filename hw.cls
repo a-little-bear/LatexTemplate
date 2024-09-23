@@ -75,7 +75,7 @@
 \DeclareVoidOption{sepia}{\ekv{mode=sepia}}
 \DeclareVoidOption{night}{\ekv{mode=night}}
 % tcb style
-\DeclareStringOption[colorful]{clsthmstyle}
+\DeclareStringOption{clsthmstyle}
 \DeclareVoidOption{formal}{\ekv{clsthmstyle=formal}}
 \DeclareVoidOption{colorful}{\ekv{clsthmstyle=colorful}}
 % fontsize
