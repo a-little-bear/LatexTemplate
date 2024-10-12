@@ -1,22 +1,24 @@
 %Template for LatexTemplate/hw.cls
 \iffalse
 
-\documentclass[11pt, cyan, night, 1in]{LatexTemplate/hw}
+    \documentclass[11pt, cyan, night, 1in, colorful]{LatexTemplate/hw}
 
-\def\course{}
-\def\headername{}
-\def\name{}
-\def\email{}
-\def\info{}
-\def\logo{}
+    \def\headername{}
 
-\begin{document}
+    % These are optinal without coverpage
+    \def\course{}
+    \def\name{}
+    \def\email{}
+    \def\info{}
+    \def\logo{}
 
-\coverpage[\clsfiles/stars]
+    \begin{document}
+
+    \coverpage[\clsfiles/stars]
 
 
 
-\end{document}
+    \end{document}
 
 \fi
 
@@ -72,6 +74,11 @@
 \DeclareVoidOption{hazy}{\ekv{mode=hazy}}
 \DeclareVoidOption{sepia}{\ekv{mode=sepia}}
 \DeclareVoidOption{night}{\ekv{mode=night}}
+% tcb style
+\DeclareStringOption{clsthmstyle}
+\DeclareVoidOption{formal}{\ekv{clsthmstyle=formal}}
+\DeclareVoidOption{colorful}{\ekv{clsthmstyle=colorful}}
+% fontsize
 \DeclareStringOption[11pt]{fontsize}
 \DeclareVoidOption{10pt}{\ekv{fontsize=10pt}}
 \DeclareVoidOption{11pt}{\ekv{fontsize=11pt}}
@@ -125,15 +132,15 @@
 %header line
 \RequirePackage{hieroglf}
 \renewcommand{\headrule}{
-        \ifcsdef{headername}{
-            \headerfootercolor\hrulefill
-            \raisebox{-2.1pt}{\quad\floweroneleft\quad \headername\quad\floweroneright\quad}\hrulefill
-        }{
-            \headerfootercolor\hrulefill
-            \raisebox{-2.1pt}{\quad{\pmhgfamily\Hibl\Hibs\Hibw\Hm\Hw\Ha\Hw\Hibp\HR\Hl}\quad}\hrulefill
-        }
+    \ifcsdef{headername}{
+        \headerfootercolor\hrulefill
+        \raisebox{-2.1pt}{\quad\floweroneleft\quad \headername\quad\floweroneright\quad}\hrulefill
+    }{
+        \headerfootercolor\hrulefill
+        \raisebox{-2.1pt}{\quad{\pmhgfamily\Hibl\Hibs\Hibw\Hm\Hw\Ha\Hw\Hibp\HR\Hl}\quad}\hrulefill
     }
-    %{\color{brown}\begin{center}\pgfornament[width=7cm]{88}\end{center}}
+}
+%{\color{brown}\begin{center}\pgfornament[width=7cm]{88}\end{center}}
 %footer line
 \renewcommand{\footrule}{
     \ifdefstring{\ALB@marg}{1in}{
@@ -191,7 +198,7 @@
     \fancyhf{}
     \ifcsdef{course}{\lhead{\headerfootercolor\course}}{}
     \ifcsdef{name}{\rhead{\headerfootercolor\name}}{}
-    
+
     %\chead{\today}
     \setlength{\headheight}{35pt}}
 % declare first page style
@@ -208,9 +215,9 @@
     }
 }{}
 \lstnewenvironment{latexcode}{\lstset{
-    language=[LaTeX]Tex,
-    numbers=none
-}}{}
+        language=[LaTeX]Tex,
+        numbers=none
+    }}{}
 
 
 
@@ -351,7 +358,7 @@
         numberstyle=\scriptsize,
         columns=flexible,
     }
-    
+
     \RequirePackage{background}
     \backgroundsetup{
         scale=1,
@@ -359,8 +366,8 @@
         opacity=1,
         angle=0,
         contents={
-            \includegraphics[width=\paperwidth,height=\paperheight]{\nightmodebackground}
-        }
+                \includegraphics[width=\paperwidth,height=\paperheight]{\nightmodebackground}
+            }
     }
 }{
     \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -445,33 +452,16 @@
 }
 \makeatother
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \RequirePackage{\clsfiles/shortcuts}
-%color boxes
+
 \RequirePackage[breakable, skins, theorems]{tcolorbox}
+\theoremstyle{\thmstyle}
 %use \tcblower for break
 %use {Title}{Ref} lemma:Ref for reference, e.g. nameref, pageref, ref
-\theoremstyle{\thmstyle}
 \RequirePackage{\clsfiles/tcbthm}
-
-
-
-
-
+\ifdefstring{\ALB@clsthmstyle}{formal}{
+    \RequirePackage{\clsfiles/clsthm}
+}{\relax}
 
 \pagestyle{style}
 \RequirePackage[skip=\skippar, indent=\indentpar]{parskip}
