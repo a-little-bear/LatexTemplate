@@ -1,0 +1,35 @@
+\ProvidesPackage{csc240}[2022/02/22 v1.0 csc240 style file]
+\NeedsTeXFormat{LaTeX2e}
+
+\newcounter{qctr}
+\newcounter{subqctr}
+\newcommand{\qno}{\addtocounter{qctr}{1}\arabic{qctr}}
+\newcommand{\question}[1]{\setcounter{subqctr}{0}\noindent\textbf{Question \qno.} ({#1} marks)\enspace}
+\newcommand{\subqno}{\addtocounter{subqctr}{1}\alph{subqctr}}
+\newcommand{\subquestion}[1][]{
+    \ifthenelse{\equal{#1}{}}
+    {\noindent\textbf{Part \subqno.}\enspace}
+    {\noindent\textbf{Part \subqno.} ({#1} marks)\enspace}
+}
+
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\Ex}[1]{\mathbb{E}[#1]}
+\renewcommand{\Pr}[1]{\mathbb{P}\left(#1\right)}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\H}{\mathcal{H}}
+
+
+\newop{\ALG}{\tsc{Algorithm}}
+\newop{\BFS}{\tsc{BFS}}
+\newop{\isequiv}{\tsc{Is-Equivalent}}
+\newop{\makeset}{\tsc{Make-Set}}
+\newop{\union}{\tsc{Union}}
+\newop{\findset}{\tsc{Find-Set}}
+\newop{\enq}{\tsc{Enqueue}}
+\newop{\deq}{\tsc{Dequeue}}
+\newop{\isempty}{\tsc{Is-Empty}}
+
+
+\renewcommand{\gets}{\leftarrow}
+\renewcommand{\qed}{\hfill$\square$}
