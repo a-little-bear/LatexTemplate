@@ -1,0 +1,49 @@
+\ProvidesPackage{csc373}
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage{xifthen}%
+\RequirePackage[hidelinks,colorlinks]{hyperref}
+\setlength\parindent{0pt}
+\usetikzlibrary{positioning}
+
+% Counter for Questions
+\newcounter{question}
+
+% Question
+\renewcommand{\question}[2]{%
+    \stepcounter{question}
+    \vspace{.25in} \textbf{Q\arabic{question}
+        \ifthenelse{\isempty{#1}}%
+        {}% if no points
+        {[#1 Points]\ }% if #1 is not empty
+        #2}\vspace{0.10in}
+}
+
+% Subquestion
+\newcommand{\qpart}[2]{%
+    \vspace{.10in} \textbf{(#1)}
+    \ifthenelse{\isempty{#2}}%
+    {}% if no points
+    {[#2 Points]}% if #1 is not empty
+}
+
+\newcommand{\references}{\vspace{.25in}\textbf{References}\vspace{.10in}}
+
+% Solution to question
+\newcommand{\solution}{\vspace{.25in}\textbf{Solution}\vspace{.10in}}
+
+% Solution to subquestion
+\newcommand{\solpart}[1] {\vspace{.10in}\textbf{(#1)}}
+
+% Should the solutions be displayed?
+\newif\ifsolutions
+\solutionstrue
+
+% Should the marking scheme be displayed?
+\newif\ifmarkingscheme
+\markingschemefalse
+
+% Math commands
+\newcommand{\set}[1]{\{#1\}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
