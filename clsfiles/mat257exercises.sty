@@ -1,0 +1,37 @@
+\ProvidesPackage{mat257exercises}
+\NeedsTeXFormat{LaTeX2e}
+
+\newcommand{\bq}{\null\hfill$\blacksquare$}
+\newcommand{\sq}{\null\hfill$\square$}
+\newcommand{\maintitle}[1]{{\noindent \Large \bf #1 \\}}
+\newcommand{\gen}[1]{\left\langle #1\right\rangle}
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Image}{\mathrm{Im}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\aut}{\mathrm{Aut}}
+\newcommand{\inn}{\mathrm{Inn}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\rrel}{\stackrel{r}{\sim}}
+\newcommand{\lrel}{\stackrel{l}{\sim}}
+\newcommand{\normal}{\trianglelefteq}
+\newcommand{\mcT}{\mathcal{T}}
+\newcommand{\mcR}{\mathcal{R}}
+\newcommand{\mx}[1]{\max\set{#1}}
+\newcommand{\degree}{^\circ} %for the interior symbol%
+%for the interior symbol%
+
+\newop{\CP}{CP}
+
+\RequirePackage{pgfplots}
+
+\pgfmathdeclarefunction{odd}{1}{%
+    \pgfmathparse{mod(#1,2)==1}%
+}
+
+\pgfplotsset{
+    axis line style={white},
+    every axis label/.append style ={white},
+    every tick label/.append style={white},
+    legend style={white}
+}
