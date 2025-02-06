@@ -22,6 +22,9 @@
 
 \fi
 
+\iffalse 
+    git submodule add https://github.com/a-little-bear/LatexTemplate.git
+\fi
 
 
 \NeedsTeXFormat{LaTeX2e}
